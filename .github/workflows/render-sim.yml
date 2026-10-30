@@ -1,0 +1,98 @@
+name: Render simulation reel
+
+# Started automatically when the private repo pushes renderer/queue/<name>.json.
+# Renders in 6 parallel parts, joins them, and publishes the video on the "sim-media" branch
+# (one squashed commit holding only the last 7 days, so the repository does not keep growing).
+on:
+  push:
+    branches: [main]
+    paths: ["renderer/queue/*.json"]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "queue file name without .json"
+        required: true
+
+concurrency:
+  group: render-sim
+  cancel-in-progress: false
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      name: ${{ steps.pick.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: pick
+        run: |
+          if [ -n "${{ inputs.name }}" ]; then N="${{ inputs.name }}"; else
+            N=$(git diff --name-only HEAD~1 HEAD -- renderer/queue/ | grep '\.json$' | head -1 | xargs -r basename | sed 's/\.json$//'); fi
+          [ -n "$N" ] || { echo "::error::no queue file"; exit 1; }
+          echo "name=$N" >> "$GITHUB_OUTPUT"; echo "::notice title=rendering::$N"
+
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: true
+      matrix:
+        part: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        timeout-minutes: 10
+        run: |
+          pip install playwright==1.63.0 numpy imageio-ffmpeg==0.6.0
+          python -m playwright install --with-deps chromium
+      - name: Render part ${{ matrix.part }}
+        run: python3 renderer/sim/render.py "renderer/queue/${{ needs.prep.outputs.name }}.json" out --chunk ${{ matrix.part }} 6
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seg-${{ matrix.part }}
+          path: out/seg_*.mp4
+          retention-days: 1
+
+  finish:
+    needs: [prep, render]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      NAME: ${{ needs.prep.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright==1.63.0 numpy imageio-ffmpeg==0.6.0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: seg-*
+          path: out
+          merge-multiple: true
+      - name: Join parts and add sound
+        run: python3 renderer/sim/render.py "renderer/queue/$NAME.json" out --finish
+      - name: Publish on the sim-media branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p /tmp/media
+          if git fetch -q origin sim-media; then
+            git worktree add -q /tmp/old origin/sim-media
+            find /tmp/old -mindepth 1 -maxdepth 1 -type d -name '20*' -newermt "$(date -u -d '7 days ago' +%F)" -exec cp -r {} /tmp/media/ \;
+          fi
+          mkdir -p "/tmp/media/$NAME" && cp out/reel.mp4 out/caption.txt "/tmp/media/$NAME/"
+          git checkout -q --orphan sim-media-new
+          git rm -rq --cached . && git clean -fdqx -e out
+          cp -r /tmp/media/* .
+          git add -A 20* && git commit -q -m "Sim media (last 7 days), latest $NAME"
+          git push -q -f origin HEAD:sim-media
+          echo "::notice title=video::https://raw.githubusercontent.com/${{ github.repository }}/sim-media/$NAME/reel.mp4"
