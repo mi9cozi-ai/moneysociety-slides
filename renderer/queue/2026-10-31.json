@@ -1,0 +1,245 @@
+{
+  "id": "everyone-holds-hands",
+  "title_html": "もしも<em>日本人全員</em>が<br>手をつないだら？",
+  "title_plain": "もしも日本人全員が手をつないだら？",
+  "setting": "休日の昼12時、あなたは渋谷駅前にいる",
+  "duration": 96,
+  "time_of_day": "day",
+  "crowd": 150,
+  "title_window": [
+    0,
+    9
+  ],
+  "stop_walking_at": 17,
+  "actions": [],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 17,
+      "scene": "city",
+      "camera": "orbit"
+    },
+    {
+      "t0": 17,
+      "t1": 27,
+      "scene": "city",
+      "camera": "low"
+    },
+    {
+      "t0": 27,
+      "t1": 50,
+      "scene": "earth"
+    },
+    {
+      "t0": 50,
+      "t1": 57,
+      "scene": "city",
+      "camera": "high"
+    },
+    {
+      "t0": 57,
+      "t1": 80,
+      "scene": "earth",
+      "people": true
+    },
+    {
+      "t0": 80,
+      "t1": 96,
+      "scene": "city",
+      "camera": "high"
+    }
+  ],
+  "captions": [
+    {
+      "t0": 9,
+      "t1": 13,
+      "html": "日本の人口は<br>約<b>1億2,269万人</b>"
+    },
+    {
+      "t0": 13,
+      "t1": 17,
+      "html": "その<b>全員</b>が手をつないで<br><b>一列</b>に並ぶ"
+    },
+    {
+      "t0": 17,
+      "t1": 21,
+      "html": "1人あたり<b>1.5m</b><br>（両手を広げた幅）"
+    },
+    {
+      "t0": 21,
+      "t1": 24,
+      "html": "<b>つながった！</b>"
+    },
+    {
+      "t0": 24,
+      "t1": 27,
+      "html": "列は<b>どこまで</b>届く？"
+    },
+    {
+      "t0": 33,
+      "t1": 37,
+      "html": "地球の赤道1周は<br>約<b>4万km</b>"
+    },
+    {
+      "t0": 42,
+      "t1": 46,
+      "html": "つまり 日本人だけで<br>地球を<b>4周半</b>以上"
+    },
+    {
+      "t0": 46,
+      "t1": 50,
+      "html": "でも<b>月</b>までは<br>約<b>38万km</b>"
+    },
+    {
+      "t0": 50,
+      "t1": 54,
+      "html": "日本人全員でも<br>月まで<b>半分</b>も届かない"
+    },
+    {
+      "t0": 54,
+      "t1": 57,
+      "html": "…<b>あと少し</b>なのに"
+    },
+    {
+      "t0": 57,
+      "t1": 62,
+      "html": "なら<br>世界中の<b>82億人</b>だったら？",
+      "sfx": "twist"
+    },
+    {
+      "t0": 62,
+      "t1": 66,
+      "html": "日本の<b>約67倍</b>の人数"
+    },
+    {
+      "t0": 66,
+      "t1": 69,
+      "html": "世界中の人が<br><b>一列</b>に手をつなぐと…"
+    },
+    {
+      "t0": 69,
+      "t1": 71,
+      "html": "<b>つながった！！</b>"
+    },
+    {
+      "t0": 80,
+      "t1": 86,
+      "html": "人類<b>全員</b>なら<br>月まで<b>16往復</b>できる"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 27,
+      "t1": 33,
+      "from": 0,
+      "to": 184035,
+      "decimals": 0,
+      "suffix": " km",
+      "label": "日本人全員の列の長さ",
+      "run": 4
+    },
+    {
+      "t0": 71,
+      "t1": 75,
+      "from": 184035,
+      "to": 12360000,
+      "decimals": 0,
+      "suffix": " km",
+      "label": "世界中の人の列の長さ",
+      "run": 3
+    }
+  ],
+  "big": [
+    {
+      "t0": 37,
+      "t1": 42,
+      "html": "約4.6周<small>日本人全員の列で 地球を巻くと</small>"
+    },
+    {
+      "t0": 75,
+      "t1": 78,
+      "html": "地球 約308周<small>世界中の人の列で 地球を巻くと</small>"
+    },
+    {
+      "t0": 78,
+      "t1": 80,
+      "html": "月まで 約32回分<small>地球〜月の距離と比べると</small>"
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 13,
+      "t1": 17,
+      "text": "全員で手をつなぐ？",
+      "person": 3
+    },
+    {
+      "t0": 14,
+      "t1": 18,
+      "text": "となりの人と…",
+      "person": 17
+    },
+    {
+      "t0": 17,
+      "t1": 21,
+      "text": "はい、手どうぞ",
+      "person": 8
+    },
+    {
+      "t0": 18,
+      "t1": 21,
+      "text": "つながった",
+      "person": 40
+    },
+    {
+      "t0": 24,
+      "t1": 27,
+      "text": "列、どこまで？",
+      "person": 25
+    },
+    {
+      "t0": 52,
+      "t1": 57,
+      "text": "月は遠いなあ",
+      "person": 12
+    }
+  ],
+  "end": {
+    "t0": 86,
+    "html": "<h1>結論：<br>日本人全員で手をつなぐと<br>地球<b>約4.6周</b>。<br>人類全員なら<br>月まで<b>約32回分</b></h1><h2>計算の前提（仮定）</h2><p>・1人あたり両手を広げた幅（手をつないだ間隔）1.5m<br>・全員が一直線にすき間なく並ぶ<br>・長さ ＝ 人数 × 1.5m</p><h2>出典</h2><p>・日本の総人口 1億2,269万人：総務省統計局 人口推計（2026年10月1日現在 概算値）<br>・世界人口 82.4億人：Population Reference Bureau「2026 World Population Data Sheet」<br>・地球の赤道半径 6,378.137km：NASA Earth Fact Sheet<br>・地球から月までの平均距離 約38.44万km：NASA Moon Fact Sheet</p><div class='note'>これはAIによるシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "もしも日本人全員が手をつないで一列に並んだら、どこまで届く？🌏 そして世界中の82億人なら？\n\n日本の人口は約1億2,269万人（総務省統計局、2026年10月1日現在の概算値）。1人あたり1.5mで手をつなぐと仮定すると、列の長さは約18万4,000km。地球の赤道1周（約40,075km、NASA）の約4.6周分です。でも月まで（約38万4,400km、NASA）は約半分しか届きません。\n\n世界人口82.4億人（Population Reference Bureau、2026年）なら約1,236万km。地球約308周、月までの距離の約32回分（約16往復）になります。\n\n計算の前提（仮定）：1人あたり両手を広げた幅1.5m、全員が一直線にすき間なく並ぶ。長さ＝人数×1.5m\n\n※これはAIによるシミュレーションです。実際の出来事ではありません。\n\n#もしも #AIシミュレーション #雑学 #地球 #月 #日本 #世界",
+  "facts_check": {
+    "population_jp": 122690000,
+    "population_jp_source": "総務省統計局 人口推計 2026年10月1日現在（概算値）",
+    "population_world": 8240000000,
+    "population_world_source": "PRB 2026 World Population Data Sheet",
+    "earth_equatorial_radius_km": 6378.137,
+    "earth_circumference_km": 40075.017,
+    "moon_distance_km": 384400,
+    "moon_source": "NASA Moon Fact Sheet (semimajor axis 0.3844×10^6 km)",
+    "arm_span_m_assumed": 1.5,
+    "line_jp_km": 184035.0,
+    "laps_jp": 4.592,
+    "moon_ratio_jp": 0.4788,
+    "line_world_km": 12360000.0,
+    "laps_world": 308.42,
+    "moon_times_world": 32.15,
+    "moon_roundtrips_world": 16.08,
+    "world_over_jp": 67.16,
+    "code": "L=人数×1.5m; 周回=L/(2π×6378.137km); 月=L/384400km"
+  },
+  "countdowns": [
+    {
+      "label": "全員がつながるまで",
+      "show_from": 0,
+      "zero_at": 21
+    },
+    {
+      "label": "世界中がつながるまで",
+      "show_from": 59,
+      "zero_at": 69
+    }
+  ],
+  "cover_ms": 3000
+}
