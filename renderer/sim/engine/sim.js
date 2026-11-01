@@ -1,7 +1,9 @@
 // Deterministic low-poly simulation renderer. The page exposes window.load(spec) and window.renderAt(t).
 import * as THREE from "../vendor/three.module.js";
+import { isExtra, buildExtra } from "./scenes.js";
 
 const W = 1080, H = 1920;
+let extras = [];
 let spec, renderer, cityScene, earthScene, camera, people = [], peopleTargets = [], earth, earthArrow, earthPeople;
 
 function rng(seed) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
@@ -205,12 +207,18 @@ window.load = (s) => {
   camera = new THREE.PerspectiveCamera(42, W / H, 0.5, 600);
   cityScene = buildCity(spec.time_of_day !== "day", spec.crowd || 120);
   earthScene = buildEarth();
-  return document.fonts.ready.then(() => "ok");
+  return document.fonts.load("900 40px JP").then(() => document.fonts.ready).then(() => {
+    extras = (spec.scenes || []).map((sc) => (isExtra(sc.scene) ? buildExtra(sc) : null));
+    return "ok";
+  });
 };
 
 window.renderAt = (t) => {
   const sc = between(spec.scenes, t) || spec.scenes[spec.scenes.length - 1];
-  if (sc.scene === "earth") {
+  const extra = extras[spec.scenes.indexOf(sc)];
+  if (extra) {
+    extra.render(t, renderer);
+  } else if (sc.scene === "earth") {
     const k = (t - sc.t0);
     earth.rotation.y = 0.4 + k * 0.08; earth.rotation.x = 0.35;
     const push = between(spec.earth_push, t);
