@@ -1,0 +1,286 @@
+{
+  "id": "everyone-stacks-10000yen",
+  "title_html": "もしも<em>日本人全員</em>が<br>1万円札を積み上げたら？",
+  "title_plain": "もしも日本人全員が1万円札を積み上げたら？",
+  "setting": "金曜の夜7時、あなたは渋谷駅前で1万円札を1枚持っている",
+  "duration": 102,
+  "time_of_day": "night",
+  "crowd": 150,
+  "title_window": [
+    0,
+    9
+  ],
+  "stop_walking_at": 14,
+  "actions": [],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 14,
+      "scene": "city",
+      "camera": "orbit"
+    },
+    {
+      "t0": 14,
+      "t1": 21,
+      "scene": "city",
+      "camera": "low"
+    },
+    {
+      "t0": 21,
+      "t1": 46,
+      "scene": "tower",
+      "item": "bill",
+      "from_m": 0,
+      "to_m": 12269,
+      "refs": [
+        {
+          "kind": "mountain",
+          "m": 3776,
+          "label": "富士山 3,776m"
+        }
+      ],
+      "grow": [
+        22,
+        34
+      ]
+    },
+    {
+      "t0": 46,
+      "t1": 66,
+      "scene": "tower",
+      "item": "bill",
+      "from_m": 12269,
+      "to_m": 400000,
+      "curve": "log",
+      "refs": [
+        {
+          "kind": "mountain",
+          "m": 3776,
+          "label": "富士山 3,776m"
+        },
+        {
+          "kind": "satellite",
+          "m": 400000,
+          "label": "宇宙ステーション 約400km"
+        }
+      ],
+      "grow": [
+        50,
+        58
+      ]
+    },
+    {
+      "t0": 66,
+      "t1": 88,
+      "scene": "space",
+      "reach": {
+        "from": 0.0117,
+        "to": 1
+      },
+      "moon_label": "月 約38万4,400km",
+      "earth_label": "地球",
+      "grow": [
+        70,
+        80
+      ]
+    },
+    {
+      "t0": 88,
+      "t1": 102,
+      "scene": "city",
+      "camera": "high"
+    }
+  ],
+  "countdowns": [
+    {
+      "label": "積み上げ開始まで",
+      "show_from": 0,
+      "zero_at": 21
+    },
+    {
+      "label": "月に届くまで",
+      "show_from": 72,
+      "zero_at": 80
+    }
+  ],
+  "captions": [
+    {
+      "t0": 9,
+      "t1": 13,
+      "html": "日本の人口は<br>約<b>1億2,269万人</b>"
+    },
+    {
+      "t0": 13,
+      "t1": 17,
+      "html": "その<b>全員</b>が<br>1万円札を<b>1枚ずつ</b>出す"
+    },
+    {
+      "t0": 17,
+      "t1": 21,
+      "html": "お札1枚の厚さは<br>約<b>0.1ミリ</b>"
+    },
+    {
+      "t0": 21,
+      "t1": 24,
+      "html": "<b>積み上げ開始！</b>"
+    },
+    {
+      "t0": 24,
+      "t1": 29,
+      "html": "0.1ミリでも<br><b>1億枚</b>を超えると…"
+    },
+    {
+      "t0": 29,
+      "t1": 34,
+      "html": "あっという間に<br><b>富士山</b>を追い越す"
+    },
+    {
+      "t0": 39,
+      "t1": 43,
+      "html": "富士山の<br>約<b>3.2倍</b>の高さ"
+    },
+    {
+      "t0": 43,
+      "t1": 46,
+      "html": "…でも 宇宙には<br><b>まだ全然</b>届かない"
+    },
+    {
+      "t0": 46,
+      "t1": 50,
+      "html": "なら<br><b>毎日</b>積み続けたら？",
+      "sfx": "twist"
+    },
+    {
+      "t0": 50,
+      "t1": 54,
+      "html": "毎日 全員が1枚ずつ<br>1日 約<b>12km</b>ずつ伸びる"
+    },
+    {
+      "t0": 54,
+      "t1": 58,
+      "html": "目指すのは<br><b>宇宙ステーション</b>"
+    },
+    {
+      "t0": 62,
+      "t1": 66,
+      "html": "1年続けると<br>約<b>4,478km</b>"
+    },
+    {
+      "t0": 66,
+      "t1": 70,
+      "html": "なら<br><b>月</b>まで届くのは何日目？",
+      "sfx": "twist"
+    },
+    {
+      "t0": 70,
+      "t1": 75,
+      "html": "月までの距離は<br>約<b>38万4,400km</b>"
+    },
+    {
+      "t0": 75,
+      "t1": 80,
+      "html": "ひたすら<br>毎日<b>1枚ずつ</b>…"
+    },
+    {
+      "t0": 88,
+      "t1": 92,
+      "html": "使った1万円札は<br>約<b>3兆8,440億枚</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 58,
+      "t1": 62,
+      "from": 1,
+      "to": 33,
+      "decimals": 0,
+      "suffix": " 日目",
+      "label": "宇宙ステーションの高さを超える日",
+      "run": 2.5
+    },
+    {
+      "t0": 80,
+      "t1": 84,
+      "from": 33,
+      "to": 31331,
+      "decimals": 0,
+      "suffix": " 日目",
+      "label": "月に届く日",
+      "run": 3
+    }
+  ],
+  "big": [
+    {
+      "t0": 34,
+      "t1": 39,
+      "html": "約12,269m<small>日本人全員の1万円札の高さ</small>"
+    },
+    {
+      "t0": 84,
+      "t1": 88,
+      "html": "約86年<small>全員が毎日1枚ずつ積み続けて やっと月へ</small>"
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 9,
+      "t1": 13,
+      "text": "1枚だけ？",
+      "person": 3
+    },
+    {
+      "t0": 13,
+      "t1": 17,
+      "text": "薄すぎない？",
+      "person": 17
+    },
+    {
+      "t0": 17,
+      "t1": 21,
+      "text": "せーので置くよ",
+      "person": 8
+    },
+    {
+      "t0": 15,
+      "t1": 19,
+      "text": "どこまで届く？",
+      "person": 40
+    },
+    {
+      "t0": 94,
+      "t1": 99,
+      "text": "一生かかるじゃん",
+      "person": 12
+    }
+  ],
+  "end": {
+    "t0": 92,
+    "html": "<h1>結論：<br>日本人全員の1万円札は<br>1日で富士山の<b>約3.2倍</b>、<br>月に届くのは<br><b>約86年後</b></h1><h2>計算の前提（仮定）</h2><p>・日本の全員が1日に1万円札を1枚ずつ、まっすぐ積む<br>・お札1枚の厚さ 約0.1mm（つぶれ・すき間なし）<br>・1年＝365日で計算</p><h2>出典</h2><p>・日本の総人口 1億2,269万人：総務省統計局 人口推計（2026年10月1日現在 概算値）<br>・お札の厚さ 1枚約0.1mm・重さ約1g：日本銀行「教えて！にちぎん」<br>・富士山 3,776m：国土地理院<br>・宇宙ステーションの高度 約400km：JAXA<br>・月までの距離 38万4,400km：NASA Moon Fact Sheet</p><div class='note'>これはAIによるシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "もしも日本人全員が1万円札を1枚ずつ積み上げたら、どこまで届く？💴\n\n日本の人口は約1億2,269万人（総務省統計局 人口推計、2026年10月1日現在の概算値）。お札は1枚約0.1mm・約1g（日本銀行）。全員で1枚ずつ積むと高さ約12,269m、富士山（3,776m、国土地理院）の約3.2倍。金額は約1兆2,269億円、重さは約123トンです。\n\nなら毎日続けたら？1日約12kmずつ伸び、33日目に宇宙ステーションの高度（約400km、JAXA）を超え、1年で約4,478km。\n\n月（約38万4,400km、NASA）に届くのは31,331日目＝約86年後。使うお札は約3兆8,440億枚（約3京8,440兆円）です。\n\n計算の前提（仮定）：全員が毎日1枚ずつまっすぐ積む、お札1枚0.1mm（つぶれ・すき間なし）、1年＝365日。\n\n※これはAIによるシミュレーションです。実際の出来事ではありません。\n\n#もしも #AIシミュレーション #雑学 #お金 #1万円札 #宇宙 #日本",
+  "facts_check": {
+    "population_jp": 122690000,
+    "population_jp_source": "総務省統計局 人口推計 2026年10月1日現在（概算値）1億2269万人 https://www.stat.go.jp/data/jinsui/new.html",
+    "bill_thickness_m": 0.0001,
+    "bill_weight_g": 1.0,
+    "bill_source": "日本銀行「お札はどのくらいの大きさですか？厚さや重さはどうなっていますか？」1,000枚で約10cm（1枚約0.1mm）・約1kg https://www.boj.or.jp/about/education/oshiete/money/c15.htm",
+    "fuji_m": 3776,
+    "fuji_source": "国土地理院 広報2020年2月「現在の標高 3,776m」/ 2024年12月24日報道発表（3776mのまま） https://www.gsi.go.jp/WNEW/PRESS-RELEASE/keikaku61003.html",
+    "iss_km": 400,
+    "iss_source": "JAXA 国際宇宙ステーション（ISS）とは「運用高度約400km」 https://humans-in-space.jaxa.jp/iss/about/",
+    "moon_km": 384400,
+    "moon_source": "NASA NSSDCA Moon Fact Sheet semimajor axis 0.3844×10^6 km https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "stack_m_per_day": 12269.0,
+    "stack_fuji_ratio": 3.249,
+    "stack_value_yen": 1226900000000,
+    "stack_weight_t": 122.69,
+    "one_year_km": 4478.185,
+    "iss_reached_day": 33,
+    "moon_reached_day": 31331,
+    "moon_years_365": 85.84,
+    "bills_to_moon": 3844000000000.0,
+    "yen_to_moon": 3.844e+16,
+    "code": "h=pop*0.0001; day_n_height=n*h; first n with n*h>=target; years=days/365"
+  },
+  "cover_ms": 3000
+}
