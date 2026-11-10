@@ -9,6 +9,7 @@ const rng = (seed) => () => { seed = (seed * 1664525 + 1013904223) >>> 0; return
 const ease = (x) => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
 const lerp = (a, b, k) => a + (b - a) * k;
 const M = (c) => new THREE.MeshLambertMaterial({ color: c, flatShading: true });
+const ja = (x) => (x && spec.lang === "en+ja" ? `<span class="ja">${x}</span>` : "");
 const between = (list, t) => (list || []).find((x) => t >= x.t0 && t < x.t1);
 
 const PALETTES = {
@@ -283,31 +284,31 @@ function setUI(t, s, name) {
   const show = (id, on) => $(id).classList.toggle("hide", !on);
   const inTitle = spec.title_window && t >= spec.title_window[0] && t < spec.title_window[1];
   show("title", inTitle); show("setting", inTitle);
-  if (inTitle) { $("title").innerHTML = spec.title_html; $("setting").textContent = spec.setting; }
+  if (inTitle) { $("title").innerHTML = spec.title_html + ja(spec.title_html_ja); $("setting").innerHTML = spec.setting + ja(spec.setting_ja); }
   const cds = spec.countdowns || (spec.countdown ? [spec.countdown] : []);
   const cd = cds.find((c) => t >= c.show_from && t < c.zero_at + 1.5); show("cd", !!cd);
   if (cd) { const left = Math.max(0, cd.zero_at - t), m = Math.floor(left / 60), sec = left - m * 60;
     $("cd").querySelector(".label").textContent = cd.label; $("cd").querySelector(".time").textContent = `${m}:${sec.toFixed(3).padStart(6, "0")}`; }
   const cap = between(spec.captions, t); show("cap", !!cap);
-  if (cap) { const sp = $("cap").firstElementChild; sp.innerHTML = cap.html; sp.className = cap.sfx === "twist" ? "twist" : ""; }
+  if (cap) { const sp = $("cap").firstElementChild; sp.innerHTML = cap.html + ja(cap.html_ja); sp.className = cap.sfx === "twist" ? "twist" : ""; }
   const big = between(spec.big, t), ctr = between(spec.counters, t); show("big", !!(big || ctr));
   if (big) $("big").innerHTML = big.html;
   else if (ctr) { const k = ease((t - ctr.t0) / Math.max(0.1, ctr.run || (ctr.t1 - ctr.t0) * 0.7)), v = ctr.from + (ctr.to - ctr.from) * k;
-    const loc = spec.lang === "en" ? "en-US" : "ja-JP";
-    $("big").innerHTML = `${ctr.prefix || ""}${v.toLocaleString(loc, { minimumFractionDigits: ctr.decimals || 0, maximumFractionDigits: ctr.decimals || 0 })}${ctr.suffix || ""}<small>${ctr.label || ""}</small>`; }
+    const loc = spec.lang === "ja" ? "ja-JP" : "en-US";
+    $("big").innerHTML = `${ctr.prefix || ""}${v.toLocaleString(loc, { minimumFractionDigits: ctr.decimals || 0, maximumFractionDigits: ctr.decimals || 0 })}${ctr.suffix || ""}<small>${ctr.label || ""}${ja(ctr.label_ja)}</small>`; }
   const fx = between(spec.effects, t); show("fx", !!fx);
   if (fx) { const tot = fx.total || (spec.effects || []).length, dots = Array.from({ length: tot }, (_, i) => `<i class="${i < fx.n ? "on" : ""}"></i>`).join("");
     const k = ease((t - fx.t0) / 0.45);
-    $("fx").style.opacity = k; $("fx").style.transform = `translateY(${(1 - k) * 40}px)`;
-    $("fx").innerHTML = `<div class="tag">EFFECT ${fx.n} · ${fx.tag}</div><div class="head">${fx.head}</div>${fx.sub ? `<div class="sub">${fx.sub}</div>` : ""}<div class="dots">${dots}</div>`; }
+    $("fx").classList.toggle("bottom", fx.pos === "bottom"); $("fx").style.opacity = k; $("fx").style.transform = `translateY(${(1 - k) * 40}px)`;
+    $("fx").innerHTML = `<div class="tag">EFFECT ${fx.n} · ${fx.tag}</div><div class="head">${fx.head}${ja(fx.head_ja)}</div>${fx.sub ? `<div class="sub">${fx.sub}${ja(fx.sub_ja)}</div>` : ""}<div class="dots">${dots}</div>`; }
   const g = between(spec.gauges, t); show("gauge", !!g);
   if (g) { const k = ease((t - g.t0 - (g.delay || 0)) / (g.run || 2.5)), v = g.from + (g.to - g.from) * k, lo = g.min ?? -50, hi = g.max ?? 20;
     const pct = Math.max(2, Math.min(100, (v - lo) / (hi - lo) * 100));
-    $("gauge").innerHTML = `<div class="gl">${g.label || ""}</div><div class="tube"><div class="fill" style="height:${pct}%;background:${v < 0 ? "#3aa0ff" : "#ff4d5e"}"></div><div class="zero" style="bottom:${(0 - lo) / (hi - lo) * 100}%"></div></div><div class="gv">${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(g.decimals ?? 1)}${g.unit || "°C"}</div>`; }
+    $("gauge").innerHTML = `<div class="gl">${g.label || ""}${ja(g.label_ja)}</div><div class="tube"><div class="fill" style="height:${pct}%;background:${v < 0 ? "#3aa0ff" : "#ff4d5e"}"></div><div class="zero" style="bottom:${(0 - lo) / (hi - lo) * 100}%"></div></div><div class="gv">${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(g.decimals ?? 1)}${g.unit || "°C"}</div>`; }
   const mk = $("marks"); mk.innerHTML = "";
   if (name === "fuji") for (const m of spec.marks || []) { if (t < m.t0 || t >= m.t1) continue;
     const v = new THREE.Vector3(0, m.y, -60).project(camera), top = (-v.y * 0.5 + 0.5) * H; if (top < 120 || top > H - 120) continue;
-    const el = document.createElement("div"); el.className = "mark"; el.style.top = `${top}px`; el.innerHTML = `<span>${m.text}</span>`; mk.appendChild(el); }
+    const el = document.createElement("div"); el.className = "mark"; el.style.top = `${top}px`; el.innerHTML = `<span>${m.text}${m.text_ja ? ` / ${m.text_ja}` : ""}</span>`; mk.appendChild(el); }
   const end = spec.end && t >= spec.end.t0; show("end", end); if (end) $("end").innerHTML = spec.end.html;
   const box = $("bubbles"); box.innerHTML = "";
   const ppl = s.userData.people || [];
@@ -327,9 +328,10 @@ function setUI(t, s, name) {
 
 window.load = async (s) => {
   spec = s;
-  document.documentElement.lang = spec.lang === "en" ? "en" : "ja";
-  if (spec.lang === "en") document.body.classList.add("en");
-  $("badge").textContent = spec.lang === "en" ? "AI SIMULATION · NOT A REAL EVENT" : "AIシミュレーション｜実際の出来事ではありません";
+  document.documentElement.lang = spec.lang === "ja" ? "ja" : "en";
+  if (spec.lang === "en" || spec.lang === "en+ja") document.body.classList.add("en");
+  if (spec.lang === "en+ja") document.body.classList.add("bi");
+  $("badge").textContent = spec.lang === "en+ja" ? "AI SIMULATION · NOT A REAL EVENT · 実際の出来事ではありません" : spec.lang === "en" ? "AI SIMULATION · NOT A REAL EVENT" : "AIシミュレーション｜実際の出来事ではありません";
   renderer = new THREE.WebGLRenderer({ canvas: $("gl"), antialias: true, preserveDrawingBuffer: true });
   renderer.setSize(W, H, false); renderer.shadowMap.enabled = true; renderer.outputColorSpace = THREE.SRGBColorSpace;
   camera = new THREE.PerspectiveCamera(42, W / H, 0.5, 900);

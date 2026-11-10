@@ -1,6 +1,6 @@
 {
   "id": "fuji-twice-as-tall",
-  "lang": "en",
+  "lang": "en+ja",
   "seed": 11,
   "title_html": "What if <em>Mt. Fuji</em><br>were twice as tall?",
   "title_plain": "What if Mt. Fuji were twice as tall?",
@@ -103,7 +103,8 @@
       "t0": 58,
       "t1": 66,
       "y": 91,
-      "text": "Jet stream: 30,000–40,000 ft"
+      "text": "Jet stream: 30,000–40,000 ft",
+      "text_ja": "ジェット気流"
     }
   ],
   "scenes": [
@@ -130,28 +131,33 @@
     {
       "t0": 5,
       "t1": 8,
-      "html": "Mt. Fuji: <b>3,776 m</b>.<br>August at the top: <b>6.4°C</b> on average."
+      "html": "Mt. Fuji: <b>3,776 m</b>.<br>Summit in August: <b>6.4°C</b>.",
+      "html_ja": "富士山は3,776 m。<br>8月の山頂は平均<b>6.4°C</b>。"
     },
     {
       "t0": 8,
       "t1": 12,
-      "html": "Let's <b>double</b> its height<br>and see what changes."
+      "html": "Let's <b>double</b> its height<br>and see what changes.",
+      "html_ja": "高さを<b>2倍</b>にして、<br>何が変わるか見てみよう。"
     },
     {
       "t0": 12,
       "t1": 16,
-      "html": "<b>It's growing!</b>"
+      "html": "<b>It's growing!</b>",
+      "html_ja": "<b>伸びてる！</b>"
     },
     {
       "t0": 40,
       "t1": 44,
       "html": "Then what if it were<br><b>3 times</b> as tall?",
-      "sfx": "twist"
+      "sfx": "twist",
+      "html_ja": "では、<b>3倍</b>なら？"
     },
     {
       "t0": 44,
       "t1": 47.5,
-      "html": "<b>Higher…</b>"
+      "html": "<b>Higher…</b>",
+      "html_ja": "<b>もっと高く…</b>"
     }
   ],
   "counters": [
@@ -162,7 +168,8 @@
       "to": 7552,
       "suffix": " m",
       "label": "Mt. Fuji × 2",
-      "run": 2.5
+      "run": 2.5,
+      "label_ja": "富士山 × 2"
     },
     {
       "t0": 47.5,
@@ -171,7 +178,8 @@
       "to": 11328,
       "suffix": " m",
       "label": "Mt. Fuji × 3",
-      "run": 2.5
+      "run": 2.5,
+      "label_ja": "富士山 × 3"
     }
   ],
   "effects": [
@@ -182,7 +190,9 @@
       "total": 5,
       "tag": "CLIMATE",
       "head": "Summer at the top:<br><b>about −18°C</b>",
-      "sub": "Air cools about <b>0.65°C every 100 m</b> you climb.<br>Its August would feel like Fuji's <b>January</b> today (−18.2°C)."
+      "sub": "Air cools about <b>0.65°C every 100 m</b> up.<br>Like Fuji's <b>January</b> today (−18.2°C).",
+      "head_ja": "夏の山頂が<b>約−18°C</b>に",
+      "sub_ja": "100 m上がるごとに約0.65°C下がる。今の山頂の1月なみ。"
     },
     {
       "t0": 28,
@@ -191,7 +201,9 @@
       "total": 5,
       "tag": "SNOW",
       "head": "The snow<br><b>stops melting</b>",
-      "sub": "Even the warmest month stays far below 0°C,<br>so the white cap could last <b>all year</b> (estimate)."
+      "sub": "Even the warmest month stays below 0°C.<br>The cap could last <b>all year</b> (estimate).",
+      "head_ja": "雪が<b>溶けなくなる</b>",
+      "sub_ja": "一番暖かい月も0°C以下。一年中、雪が残る（推定）。"
     },
     {
       "t0": 34,
@@ -200,7 +212,9 @@
       "total": 5,
       "tag": "AIR",
       "head": "Each breath:<br><b>about 38% of the oxygen</b>",
-      "sub": "Air pressure at 7,500 m is about <b>383 hPa</b>,<br>vs <b>1,013 hPa</b> at sea level."
+      "sub": "Air pressure at 7,500 m is about <b>383 hPa</b>,<br>vs <b>1,013 hPa</b> at sea level.",
+      "head_ja": "酸素は平地の<b>約38%</b>",
+      "sub_ja": "7,500 mの気圧は約383 hPa。平地は1,013 hPa。"
     },
     {
       "t0": 51,
@@ -209,7 +223,9 @@
       "total": 5,
       "tag": "CLIMATE",
       "head": "August at the top:<br><b>about −43°C</b>",
-      "sub": "Colder than Fuji's <b>all-time record low</b><br>(−38.0°C, Feb 1981) — in midsummer."
+      "sub": "Colder than Fuji's <b>all-time record low</b><br>(−38.0°C, Feb 1981) — in midsummer.",
+      "head_ja": "8月の山頂が<b>約−43°C</b>に",
+      "sub_ja": "観測史上最低（−38.0°C）より寒い。しかも真夏。"
     },
     {
       "t0": 58,
@@ -218,7 +234,10 @@
       "total": 5,
       "tag": "WIND",
       "head": "The peak pokes into<br><b>the jet stream</b>",
-      "sub": "A river of wind at <b>30,000–40,000 ft</b>.<br>It's why winter flights Fukuoka→Tokyo are<br>about <b>30 min faster</b> than the other way."
+      "sub": "A river of wind at <b>30,000–40,000 ft</b>.<br>Why winter flights Fukuoka→Tokyo are<br>about <b>30 min faster</b>.",
+      "head_ja": "山頂が<b>ジェット気流</b>に届く",
+      "sub_ja": "高度約9〜12 kmの強い西風。冬の福岡→東京便が約30分早い理由。",
+      "pos": "bottom"
     }
   ],
   "gauges": [
@@ -231,7 +250,8 @@
       "delay": 0.6,
       "run": 3,
       "min": -50,
-      "max": 20
+      "max": 20,
+      "label_ja": "山頂の8月"
     },
     {
       "t0": 51,
@@ -242,7 +262,8 @@
       "delay": 0.6,
       "run": 3,
       "min": -50,
-      "max": 20
+      "max": 20,
+      "label_ja": "山頂の8月"
     }
   ],
   "bubbles": [
@@ -261,9 +282,9 @@
   ],
   "end": {
     "t0": 66,
-    "html": "<h1>What we learned:<br><b>Height is climate.</b><br>1 km higher ≈ 6.5°C colder.</h1><p>That's why Fuji keeps snow<br>while the town below is warm.</p><h2>Assumptions</h2><p>· Simple estimate: 0.65°C cooler per 100 m<br>· Real geology and weather are ignored</p><h2>Sources</h2><p>· Height: Geospatial Information Authority of Japan<br>· Summit normals 1991–2020, jet stream: JMA<br>· Record low −38.0°C: Ministry of the Environment<br>· Cooling rate: Heibonsha World Encyclopedia<br>· Pressure by altitude: standard altitude table</p><div class='note'>This is an AI simulation. It is not a real event.</div>"
+    "html": "<h1>What we learned:<br><b>Height is climate.</b><br>1 km higher ≈ 6.5°C colder.</h1><p class='jaend'>わかったこと：<b>高さは気候を変える。</b><br>1 km高いと約6.5°C寒い。だから富士山は、<br>ふもとが暖かくても雪をかぶっている。</p><h2>Assumptions</h2><p>· Simple estimate: 0.65°C cooler per 100 m<br>· Real geology and weather are ignored</p><h2>Sources</h2><p>· Height: Geospatial Information Authority of Japan<br>· Summit normals 1991–2020, jet stream: JMA<br>· Record low −38.0°C: Ministry of the Environment<br>· Cooling rate: Heibonsha World Encyclopedia<br>· Pressure by altitude: standard altitude table</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
   },
-  "caption": "What if Mt. Fuji were twice as tall? 🗻\n\nAt the summit (3,776 m), August averages 6.4°C (JMA normals, 1991–2020). Air cools about 0.65°C for every 100 m you climb — so a Fuji twice as tall would be roughly 24.5°C colder at the top.\n\n① Summer at the top: about −18°C — like Fuji's January today (−18.2°C).\n② Every month stays below freezing, so the snow cap could last all year (estimate).\n③ At 7,500 m the air pressure is about 383 hPa vs 1,013 hPa at sea level: each breath holds about 38% of the oxygen.\n\nAt 3× (11,328 m):\n④ August at the top: about −43°C — colder than Fuji's all-time record low of −38.0°C.\n⑤ The peak reaches the jet stream (30,000–40,000 ft), the wind that makes winter flights Fukuoka→Tokyo about 30 min faster than Tokyo→Fukuoka.\n\nWhat we learned: height is climate.\n\nSources: Geospatial Information Authority of Japan; Japan Meteorological Agency (summit normals; Haneda Airport Office jet stream notes); Ministry of the Environment; Heibonsha World Encyclopedia (lapse rate); standard altitude–pressure table.\nAssumptions: simple estimate with a standard lapse rate; real geology and weather are ignored.\n\n※ This is an AI simulation. It is not a real event.\n\n#whatif #aisimulation #japan #mtfuji #fujisan #science #climate #funfacts",
+  "caption": "What if Mt. Fuji were twice as tall? 🗻\nもしも富士山が2倍の高さだったら？\n\nAugust at the summit averages 6.4°C (JMA). Air cools about 0.65°C per 100 m.\n×2 (7,552 m)\n① Summer summit ≈ −18°C, like Fuji's January today\n② Below 0°C all year → snow could stay (estimate)\n③ Air pressure ≈ 383 hPa → about 38% of sea-level oxygen\n×3 (11,328 m)\n④ August summit ≈ −43°C, colder than the record low (−38.0°C)\n⑤ The peak reaches the jet stream (30,000–40,000 ft)\nLesson: height is climate.\n\n山頂の8月の平均気温は6.4°C（気象庁）。気温は100 m上がるごとに約0.65°C下がる。\n2倍（7,552 m）\n① 夏の山頂が約−18°C（今の1月なみ）\n② 一年中0°C以下 → 雪が溶けない（推定）\n③ 気圧は約383 hPa → 酸素は平地の約38%\n3倍（11,328 m）\n④ 8月の山頂が約−43°C（観測史上最低−38.0°Cより寒い）\n⑤ 山頂がジェット気流（高度約9〜12 km）に届く\nわかったこと：高さは気候を変える。\n\nSources / 出典: 国土地理院, 気象庁（平年値・羽田航空気象観測所）, 環境省, 世界大百科事典（気温減率）, 高度と気圧の表\nAssumptions / 前提: simple estimate with a standard lapse rate; real geology and weather are ignored.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #富士山 #mtfuji #science #雑学",
   "facts_check": {
     "fuji_m": 3776,
     "aug_summit_c": 6.4,
@@ -293,5 +314,7 @@
     "https://www.data.jma.go.jp/haneda-airport/weather_topics/file/rjtt_wt20130930.pdf"
   ],
   "cover_ms": 22000,
+  "title_html_ja": "もしも富士山が2倍の高さだったら？",
+  "setting_ja": "8月、富士山のふもとの湖で。",
   "scene": "fuji"
 }
