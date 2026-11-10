@@ -144,6 +144,13 @@ def build(spec, path):
         add(buf, impact(), j + 0.85, 0.9)
     for s in spec.get("scenes", [])[1:]:
         add(buf, whoosh(0.7, False), s["t0"] - 0.35, 0.3)
+    for e in spec.get("effects", []):
+        add(buf, whoosh(0.4, True), e["t0"] - 0.4, 0.25)
+        add(buf, chime(), e["t0"], 0.45)
+    for a in spec.get("actions", []):
+        if a["type"] == "scale_mountain":
+            add(buf, impact(), a["t"], 0.6)
+            add(buf, riser(a.get("dur", 3)), a["t"], 0.3)
     for b in spec.get("big", []):
         add(buf, chime(), b["t0"], 0.35)
     for c in spec.get("captions", []):
