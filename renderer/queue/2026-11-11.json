@@ -1,0 +1,285 @@
+{
+  "id": "sea-rises-1m",
+  "lang": "en+ja",
+  "seed": 23,
+  "scene": "beach",
+  "title_html": "What if Japan's sea<br>rose <em>1 meter</em>?",
+  "title_html_ja": "もしも日本の海面が1 m上がったら？",
+  "title_plain": "What if Japan's sea rose 1 meter?",
+  "setting": "A summer beach on the Japanese coast.",
+  "setting_ja": "夏、日本のとある海岸で。",
+  "duration": 80,
+  "time_of_day": "day",
+  "crowd": 60,
+  "title_window": [
+    0,
+    5
+  ],
+  "countdowns": [
+    {
+      "label": "Sea rises in",
+      "show_from": 8,
+      "zero_at": 12
+    },
+    {
+      "label": "Sea drops in",
+      "show_from": 40,
+      "zero_at": 44
+    }
+  ],
+  "actions": [
+    {
+      "t": 12,
+      "type": "sea_level",
+      "from": 0.3,
+      "to": 1.7,
+      "dur": 4
+    },
+    {
+      "t": 44,
+      "type": "sea_level",
+      "from": 1.7,
+      "to": -4,
+      "dur": 3.5
+    },
+    {
+      "t": 44,
+      "type": "shake",
+      "dur": 3,
+      "amp": 0.4
+    }
+  ],
+  "sky": [
+    {
+      "t": 20,
+      "to": "#8fb8de",
+      "dur": 3
+    },
+    {
+      "t": 44,
+      "to": "#9fb6c9",
+      "dur": 4
+    }
+  ],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 20,
+      "scene": "beach",
+      "camera": "side"
+    },
+    {
+      "t0": 20,
+      "t1": 40,
+      "scene": "beach",
+      "camera": "high"
+    },
+    {
+      "t0": 40,
+      "t1": 48,
+      "scene": "beach",
+      "camera": "side"
+    },
+    {
+      "t0": 48,
+      "t1": 59,
+      "scene": "map",
+      "camera": "top"
+    },
+    {
+      "t0": 59,
+      "t1": 80,
+      "scene": "map",
+      "camera": "low"
+    }
+  ],
+  "map_markers": [
+    {
+      "lon": 133.9,
+      "lat": 34.2,
+      "label": "Seto Sea",
+      "t0": 52,
+      "height": 14,
+      "color": "#e0b25a",
+      "radius": 3
+    },
+    {
+      "lon": 141.9,
+      "lat": 45.7,
+      "label": "Soya Strait",
+      "t0": 59,
+      "height": 14,
+      "color": "#e0b25a",
+      "radius": 3
+    }
+  ],
+  "captions": [
+    {
+      "t0": 5,
+      "t1": 8.5,
+      "html": "Today, <b>861 km²</b> of Japan<br>already lies below high tide.",
+      "html_ja": "今でも日本の<b>861 km²</b>は<br>満潮時の海面より低い。"
+    },
+    {
+      "t0": 8.5,
+      "t1": 12,
+      "html": "Let's raise the sea by <b>1 m</b><br>and see what changes.",
+      "html_ja": "海面を<b>1 m</b>上げて、<br>何が変わるか見てみよう。"
+    },
+    {
+      "t0": 12,
+      "t1": 16,
+      "html": "<b>The water is rising!</b>",
+      "html_ja": "<b>海が上がってくる！</b>"
+    },
+    {
+      "t0": 40,
+      "t1": 44,
+      "html": "Then what if the sea <b>dropped<br>130 m</b>, like 20,000 years ago?",
+      "sfx": "twist",
+      "html_ja": "では、2万年前のように<br>海面が<b>130 m下がったら</b>？"
+    },
+    {
+      "t0": 44,
+      "t1": 48,
+      "html": "<b>Draining…</b>",
+      "html_ja": "<b>海が引いていく…</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 16,
+      "t1": 20,
+      "from": 0,
+      "to": 100,
+      "prefix": "+",
+      "suffix": " cm",
+      "label": "Sea level",
+      "run": 2.5,
+      "label_ja": "海面の高さ"
+    },
+    {
+      "t0": 48,
+      "t1": 52,
+      "from": 0,
+      "to": -130,
+      "suffix": " m",
+      "label": "Sea level",
+      "run": 2.5,
+      "label_ja": "海面の高さ"
+    }
+  ],
+  "effects": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "n": 1,
+      "total": 5,
+      "tag": "BEACHES",
+      "head": "<b>90%</b> of Japan's<br>sandy beaches vanish",
+      "sub": "Even <b>+30 cm</b> would erase about <b>57%</b>.<br>(Japanese government study)",
+      "head_ja": "日本の砂浜の<b>約9割</b>が消える",
+      "sub_ja": "30 cm上がるだけでも約57%が消える（国の調査）。"
+    },
+    {
+      "t0": 27,
+      "t1": 34,
+      "n": 2,
+      "total": 5,
+      "tag": "LAND",
+      "head": "Land below high tide:<br><b>861 → 2,339 km²</b>",
+      "sub": "<b>2.7×</b> as much land would sit<br>below the sea at high tide.",
+      "head_ja": "満潮より低い土地が<b>2.7倍</b>に",
+      "sub_ja": "861 km² → 2,339 km²。"
+    },
+    {
+      "t0": 34,
+      "t1": 40,
+      "n": 3,
+      "total": 5,
+      "tag": "LIFE",
+      "head": "People below high tide:<br><b>2.0 → 4.1 million</b>",
+      "sub": "Storm-surge risk zones: <b>11.7 → 15.4 million</b><br>people.",
+      "head_ja": "満潮より低い所に住む人が<b>200万→410万人</b>に",
+      "sub_ja": "高潮で浸水するおそれのある地域の人口は1,174万→1,542万人。"
+    },
+    {
+      "t0": 52,
+      "t1": 59,
+      "n": 4,
+      "total": 5,
+      "tag": "LAND",
+      "head": "The Seto Inland Sea<br><b>becomes dry land</b>",
+      "sub": "Its average depth is only <b>38 m</b>.<br>Mammoth and deer fossils are found there.",
+      "head_ja": "瀬戸内海が<b>陸地になる</b>",
+      "sub_ja": "平均水深はわずか38 m。マンモスやシカの化石も見つかっている。"
+    },
+    {
+      "t0": 59,
+      "t1": 66,
+      "n": 5,
+      "total": 5,
+      "tag": "WALK",
+      "head": "Walk from Hokkaido<br>to <b>Sakhalin</b>",
+      "sub": "Soya Strait is only <b>30–70 m</b> deep and 43 km wide.<br>130 m lower → a land bridge (estimate).",
+      "head_ja": "北海道から<b>サハリンへ歩ける</b>",
+      "sub_ja": "宗谷海峡の水深は30〜70 m。130 m下がれば陸続き（推定）。",
+      "pos": "bottom"
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 12.5,
+      "t1": 16,
+      "text": "The water's coming!",
+      "person": 3
+    },
+    {
+      "t0": 13,
+      "t1": 16,
+      "text": "Our beach!",
+      "person": 11
+    },
+    {
+      "t0": 44.5,
+      "t1": 48,
+      "text": "Where did the sea go?",
+      "person": 7
+    }
+  ],
+  "end": {
+    "t0": 66,
+    "html": "<h1>What we learned:<br><b>The coastline is not fixed.</b><br>1 m up erases beaches; 130 m down joins islands.</h1><p class='jaend'>わかったこと：<b>海岸線は動く。</b><br>1 m上がれば砂浜が消え、130 m下がれば島がつながる。</p><h2>Assumptions</h2><p>· Effects of +1 m come from 1990s government studies<br>· Land bridges assume today's sea-floor depths</p><h2>Sources</h2><p>· Beaches: Environment Agency white paper (1995)<br>· Land &amp; people: CGER Data Book on Sea-Level Rise<br>· Seto Inland Sea: MLIT<br>· Soya Strait depth: Geological Survey of Japan</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if Japan's sea rose 1 meter? 🌊\nもしも日本の海面が1 m上がったら？\n\nToday 861 km² of Japan already lies below high tide, home to about 2 million people.\n+1 m\n① About 90% of Japan's sandy beaches vanish (+30 cm already erases ~57%)\n② Land below high tide: 861 → 2,339 km² (2.7×)\n③ People living below high tide: 2.0 → 4.1 million; storm-surge risk zones 11.7 → 15.4 million\n−130 m (like 20,000 years ago)\n④ The Seto Inland Sea (average depth 38 m) becomes dry land\n⑤ Soya Strait (30–70 m deep) becomes a land bridge to Sakhalin (estimate)\nLesson: the coastline is not fixed.\n\n今でも日本の861 km²は満潮時の海面より低く、約200万人が住んでいる。\n+1 m\n① 砂浜の約9割が消える（30 cmでも約57%）\n② 満潮より低い土地が861→2,339 km²（2.7倍）\n③ そこに住む人が200万→410万人。高潮の危険地域は1,174万→1,542万人\n−130 m（2万年前のように）\n④ 瀬戸内海（平均水深38 m）が陸地に\n⑤ 宗谷海峡（水深30〜70 m）が陸続きに（推定）\nわかったこと：海岸線は動く。\n\nSources / 出典: 環境白書（平成7年）, CGER『Data Book on Sea-Level Rise』, 国土交通省（瀬戸内海の地形と地質）, 産総研 地質調査総合センター\nAssumptions / 前提: +1 m effects are from 1990s government studies; the land bridges assume today's sea-floor depths.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #海面上昇 #sealevel #science #雑学",
+  "facts_check": {
+    "area_below_high_tide_now_km2": 861,
+    "area_below_high_tide_1m_km2": 2339,
+    "area_ratio": 2.7166,
+    "people_below_high_tide_now_million": 2.0,
+    "people_below_high_tide_1m_million": 4.1,
+    "people_ratio": 2.05,
+    "storm_surge_people_now_million": 11.74,
+    "storm_surge_people_1m_million": 15.42,
+    "beach_loss_30cm_pct": 56.6,
+    "beach_loss_65cm_pct": 81.7,
+    "beach_loss_1m_pct": 90.3,
+    "lgm_sea_drop_m": 130,
+    "seto_avg_depth_m": 38,
+    "seto_dry": true,
+    "soya_depth_m": [
+      30,
+      70
+    ],
+    "soya_width_km": 43,
+    "soya_margin_m": 60,
+    "soya_dry": true
+  },
+  "sources": [
+    "https://www.env.go.jp/policy/hakusyo/h07/9617.html",
+    "https://gdrc.org/oceans/un-seahorse/sea-rise.html",
+    "https://www.mlit.go.jp/tagengo-db/R6-00240.html",
+    "https://www.gsj.jp/data/gcn/gsj_cn_vol2.no8_229-234.pdf"
+  ],
+  "cover_ms": 22000
+}
