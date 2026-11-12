@@ -1,0 +1,122 @@
+{
+  "id": "tokyo-1000m-higher",
+  "lang": "en+ja",
+  "seed": 37,
+  "scene": "city",
+  "title_html": "What if <em>Tokyo</em> were<br>1,000 m higher?",
+  "title_html_ja": "もしも東京が1,000 m高い場所にあったら？",
+  "title_plain": "What if Tokyo were 1,000 m higher?",
+  "setting": "A busy crossing in Tokyo, near sea level.",
+  "setting_ja": "海抜の低い東京の交差点で。",
+  "duration": 78,
+  "time_of_day": "day",
+  "crowd": 70,
+  "title_window": [0, 5],
+  "countdowns": [
+    {"label": "Tokyo rises in", "show_from": 8, "zero_at": 12},
+    {"label": "Tokyo rises in", "show_from": 40, "zero_at": 44}
+  ],
+  "actions": [
+    {"t": 12, "type": "shake", "dur": 4, "amp": 0.6},
+    {"t": 44, "type": "shake", "dur": 3.5, "amp": 0.8}
+  ],
+  "sky": [
+    {"t": 16, "to": "#7fb0e0", "dur": 3},
+    {"t": 44, "to": "#3f74b8", "dur": 4}
+  ],
+  "marks": [
+    {"t0": 47, "t1": 66, "y": 38, "text": "Tokyo is now up here: 3,776 m", "text_ja": "東京がここに：3,776 m"}
+  ],
+  "scenes": [
+    {"t0": 0, "t1": 20, "scene": "city", "camera": "orbit"},
+    {"t0": 20, "t1": 40, "scene": "city", "camera": "high"},
+    {"t0": 40, "t1": 78, "scene": "fuji", "camera": "far"}
+  ],
+  "captions": [
+    {"t0": 5, "t1": 8, "html": "Tokyo, average temperature:<br>August <b>26.9°C</b>, January <b>5.4°C</b>.", "html_ja": "東京の平均気温は<br>8月<b>26.9°C</b>、1月<b>5.4°C</b>。"},
+    {"t0": 8, "t1": 12, "html": "Let's lift the whole city<br><b>1,000 m</b> up and see<br>what changes.", "html_ja": "街ごと<b>1,000 m</b>持ち上げて、<br>何が変わるか見てみよう。"},
+    {"t0": 12, "t1": 16, "html": "<b>We're rising!</b>", "html_ja": "<b>上がってる！</b>"},
+    {"t0": 40, "t1": 44, "html": "Then what if Tokyo sat<br>as high as <b>Fuji's summit</b>?", "sfx": "twist", "html_ja": "では、<b>富士山の山頂</b>と<br>同じ高さなら？"},
+    {"t0": 44, "t1": 47.5, "html": "<b>Higher…</b>", "html_ja": "<b>もっと高く…</b>"}
+  ],
+  "counters": [
+    {"t0": 16, "t1": 20, "from": 0, "to": 1000, "prefix": "+", "suffix": " m", "label": "Tokyo lifted", "label_ja": "東京の上昇", "run": 2.5},
+    {"t0": 47.5, "t1": 51, "from": 1000, "to": 3776, "prefix": "+", "suffix": " m", "label": "Tokyo = Fuji's summit", "label_ja": "東京＝富士山頂の高さ", "run": 2.5}
+  ],
+  "effects": [
+    {"t0": 20, "t1": 27, "n": 1, "total": 5, "tag": "CLIMATE",
+     "head": "August in Tokyo:<br><b>about 20.9°C</b>",
+     "sub": "Air cools about <b>0.6°C every 100 m</b> up.<br>Cooler than <b>Sapporo's August</b> (22.3°C).",
+     "head_ja": "東京の8月が<b>約20.9°C</b>に",
+     "sub_ja": "100 m上がるごとに約0.6°C下がる。札幌の8月（22.3°C）より涼しい。"},
+    {"t0": 27, "t1": 33, "n": 2, "total": 5, "tag": "SNOW",
+     "head": "January average:<br><b>below 0°C</b> (about −0.6°C)",
+     "sub": "5.4°C − 6°C. Snowy, icy winters<br>would be far more common <b>(estimate)</b>.",
+     "head_ja": "1月の平均が<b>0°C以下</b>（約−0.6°C）",
+     "sub_ja": "5.4°C−6°C。雪や凍結がずっと増える（推定）。"},
+    {"t0": 33, "t1": 40, "n": 3, "total": 5, "tag": "KITCHEN",
+     "head": "Water boils at<br><b>about 97°C</b>",
+     "sub": "Air pressure drops to <b>~899 hPa</b> (from 1,013).<br>Rule: 100 + 0.0277 × (P − 1013).",
+     "head_ja": "お湯が<b>約97°C</b>で沸騰",
+     "sub_ja": "気圧が約899 hPaに下がる。沸点＝100＋0.0277×(気圧−1013)。"},
+    {"t0": 51, "t1": 58, "n": 4, "total": 5, "tag": "CLIMATE",
+     "head": "August in Tokyo:<br><b>about 4°C</b> (estimate)",
+     "sub": "26.9°C − 0.6°C × 37.76.<br>Close to Fuji's real summit in summer (~6°C).",
+     "head_ja": "東京の8月が<b>約4°C</b>に（推定）",
+     "sub_ja": "26.9°C−0.6°C×37.76。今の富士山頂の真夏（約6°C）に近い。"},
+    {"t0": 58, "t1": 66, "n": 5, "total": 5, "tag": "AIR",
+     "head": "Each breath: <b>about 63%</b><br>of the oxygen",
+     "sub": "Air pressure ≈ <b>635 hPa</b>, about 2/3 of sea level.<br>Water boils at only <b>about 87°C</b>.",
+     "head_ja": "ひと呼吸の酸素は<b>約63%</b>",
+     "sub_ja": "気圧は約635 hPa（平地の約3分の2）。お湯は約87°Cで沸騰。",
+     "pos": "bottom"}
+  ],
+  "gauges": [
+    {"t0": 20, "t1": 27, "label": "Tokyo<br>August", "label_ja": "東京の8月", "from": 26.9, "to": 20.9, "delay": 0.6, "run": 3, "min": -20, "max": 30, "decimals": 1},
+    {"t0": 27, "t1": 33, "label": "Tokyo<br>January", "label_ja": "東京の1月", "from": 5.4, "to": -0.6, "delay": 0.6, "run": 3, "min": -20, "max": 30, "decimals": 1},
+    {"t0": 33, "t1": 40, "label": "Water<br>boils at", "label_ja": "水の沸点", "from": 100, "to": 96.8, "delay": 0.6, "run": 3, "min": 80, "max": 105, "decimals": 1},
+    {"t0": 51, "t1": 58, "label": "Tokyo<br>August", "label_ja": "東京の8月", "from": 20.9, "to": 4.2, "delay": 0.6, "run": 3, "min": -20, "max": 30, "decimals": 1},
+    {"t0": 58, "t1": 66, "label": "Water<br>boils at", "label_ja": "水の沸点", "from": 96.8, "to": 87, "delay": 0.6, "run": 3, "min": 80, "max": 105, "decimals": 0}
+  ],
+  "bubbles": [
+    {"t0": 12.5, "t1": 16, "text": "Whoa!", "person": 3},
+    {"t0": 13, "t1": 16, "text": "Are we flying?!", "person": 11}
+  ],
+  "end": {
+    "t0": 66,
+    "html": "<h1>What we learned:<br><b>Height changes everything.</b><br>Higher = colder, thinner air,<br>cooler boiling water.</h1><p class='jaend'>わかったこと：<b>高さはすべてを変える。</b><br>高いほど寒く、空気は薄く、お湯は低い温度で沸く。</p><h2>Assumptions</h2><p>· Tokyo starts near sea level<br>· Simple estimate: 0.6°C cooler per 100 m<br>· Standard average atmosphere; real weather ignored</p><h2>Sources</h2><p>· Tokyo &amp; Sapporo normals 1991–2020: JMA<br>· Cooling rate, Fuji summit ~6°C, boiling ~87°C: Shizuoka Pref.<br>· Pressure by altitude: barometric table (deleze.name)<br>· Boiling point rule: Keio University lab text</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if Tokyo were 1,000 m higher? 🏙️⛰️\nもしも東京が1,000 m高い場所にあったら？\n\nTokyo averages 26.9°C in August and 5.4°C in January (JMA). Air cools about 0.6°C per 100 m.\n+1,000 m\n① August ≈ 20.9°C, cooler than Sapporo's August (22.3°C)\n② January ≈ −0.6°C, below freezing → much more snow and ice (estimate)\n③ Air pressure ≈ 899 hPa → water boils at about 97°C\nAs high as Fuji's summit (+3,776 m)\n④ August ≈ 4°C (estimate), close to Fuji's summit in summer (~6°C)\n⑤ Pressure ≈ 635 hPa → about 63% of the oxygen per breath; water boils at about 87°C\nLesson: height changes everything — colder, thinner air, cooler boiling water.\n\n東京の平均気温は8月26.9°C、1月5.4°C（気象庁）。気温は100 m上がるごとに約0.6°C下がる。\n+1,000 m\n① 8月が約20.9°C（札幌の8月22.3°Cより涼しい）\n② 1月が約−0.6°C → 雪や凍結がずっと増える（推定）\n③ 気圧は約899 hPa → お湯は約97°Cで沸騰\n富士山頂の高さ（+3,776 m）\n④ 8月が約4°C（推定）、今の富士山頂の真夏（約6°C）に近い\n⑤ 気圧は約635 hPa → 酸素は約63%、お湯は約87°Cで沸騰\nわかったこと：高さはすべてを変える。\n\nSources / 出典: 気象庁（東京・札幌の平年値）, 静岡県（富士山の気温・沸点）, 気圧の高度表, 慶應義塾大学 実験テキスト（沸点の式）\nAssumptions / 前提: Tokyo starts near sea level; simple 0.6°C/100 m estimate; standard atmosphere; real weather ignored.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #tokyo #東京 #science #雑学",
+  "facts_check": {
+    "tokyo_aug_c": 26.9,
+    "tokyo_jan_c": 5.4,
+    "sapporo_aug_c": 22.3,
+    "lapse_c_per_100m": 0.6,
+    "h1_m": 1000,
+    "h1_cooling": 6.0,
+    "h1_aug": 20.9,
+    "h1_jan": -0.6,
+    "p0_hpa": 1013.2,
+    "p1000_hpa": 898.76,
+    "bp_rule": "100 + 0.0277*(P-1013)",
+    "bp1000_c": 96.84,
+    "h2_m": 3776,
+    "h2_cooling": 22.656,
+    "h2_aug": 4.24,
+    "fuji_summit_summer_c": 6,
+    "p3700_hpa": 640.93,
+    "p3800_hpa": 632.69,
+    "p3776_hpa_interp": 634.67,
+    "o2_ratio_3776": 0.626,
+    "bp_fuji_c": 87
+  },
+  "sources": [
+    "https://www.data.jma.go.jp/tokyo/shosai/chiiki/gaikyo/662_202608.pdf",
+    "https://www.jma-net.go.jp/tokyo/shosai/chiiki/gaikyo/662_01.pdf",
+    "https://www.jma-net.go.jp/sapporo/tenki/kikou/weatherflush/pdf/sokuhou202608.pdf",
+    "https://www.pref.shizuoka.jp/kankosports/kanko/mtfuji/1002778/1019409.html",
+    "https://deleze.name/marcel/en/physique/TemperaturesEbullition/table_pression_atm-en.html",
+    "https://www.sci.keio.ac.jp/gp/87B7D75A/40E172F1/1DEB7D88.pdf"
+  ],
+  "cover_ms": 22000
+}
