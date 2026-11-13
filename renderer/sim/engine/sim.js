@@ -1,9 +1,10 @@
 // Deterministic low-poly simulation renderer. The page exposes window.load(spec) and window.renderAt(t).
 // Scenes: city | station | fuji | beach | map | earth. Lighting: day | sunset | night.
 import * as THREE from "../vendor/three.module.js";
+import { voxelPerson, animateLimbs, buildStreet, makePost } from "./look.js";
 
 const W = 1080, H = 1920;
-let spec, renderer, camera, scenes = {}, japan = null;
+let spec, renderer, camera, scenes = {}, japan = null, post = null;
 const $ = (id) => document.getElementById(id);
 const rng = (seed) => () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
 const ease = (x) => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
@@ -51,6 +52,7 @@ function building(s, r, pal, x, z, w, d, h) {
 const SHIRTS = [0xe8a23a, 0x3a6fd8, 0x2f8a5c, 0xd8d0c0, 0x8e44ad, 0xc0392b, 0x34495e, 0xf1c40f, 0x16a085, 0xecf0f1];
 const SKIN = [0xf1c8a0, 0xe0ac80, 0xc68a5f];
 function person(r) {
+  if (spec.style !== "classic") return voxelPerson(r, { umbrella: (spec.umbrellas || 0) > r() });
   const p = new THREE.Group();
   const body = new THREE.Mesh(new THREE.BoxGeometry(0.9, 1.1, 0.55), M(SHIRTS[Math.floor(r() * SHIRTS.length)])); body.position.y = 1.55;
   const head = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.62, 0.62), M(SKIN[Math.floor(r() * SKIN.length)])); head.position.y = 2.45;
@@ -61,10 +63,10 @@ function person(r) {
   return p;
 }
 // people walk inside a rectangle [x0,x1]x[z0,z1] at height y
-function addCrowd(s, r, n, box, y = 0) {
+function addCrowd(s, r, n, box, y = 0, axis = null) {
   for (let i = 0; i < n; i++) {
     const p = person(r);
-    p.userData = { x0: lerp(box[0], box[1], r()), z0: lerp(box[2], box[3], r()), dir: r() * Math.PI * 2,
+    p.userData = { ...p.userData, x0: axis === "z" ? (r() < 0.5 ? -1 : 1) * lerp(1.6, Math.abs(box[1]), r()) : lerp(box[0], box[1], r()), z0: lerp(box[2], box[3], r()), dir: axis === "z" ? (r() < 0.5 ? Math.PI / 2 : -Math.PI / 2) + (r() - 0.5) * 0.1 : r() * Math.PI * 2,
                    speed: 0.5 + r() * 0.8, phase: r() * 10, jitter: r(), box, y };
     s.add(p); s.userData.people.push(p);
   }
@@ -233,7 +235,8 @@ function placePeople(s, t) {
     let x = u.x0 + Math.cos(u.dir) * u.speed * tw, z = u.z0 + Math.sin(u.dir) * u.speed * tw;
     x = x0 + (((x - x0) % wx) + wx) % wx; z = z0 + (((z - z0) % wz) + wz) % wz;
     const walking = t < stopAt;
-    p.position.set(x, u.y + personY(p, t) + (walking ? Math.abs(Math.sin((t + u.phase) * 6)) * 0.08 : 0), z);
+    p.position.set(x, u.y + personY(p, t) + (walking ? Math.abs(Math.sin((t + u.phase) * 7)) * 0.05 : 0), z);
+    animateLimbs(p, t + u.phase, walking, u.speed);
     if (walking) p.rotation.y = -u.dir + Math.PI / 2;
   }
 }
@@ -244,6 +247,8 @@ function shake(t) {
   return [0, 0];
 }
 function animate(s, name, t) {
+  if (s.userData.animHeroes) s.userData.animHeroes(t);
+  if (s.userData.rain) s.userData.rain.visible = !spec.rain_window || (t >= spec.rain_window[0] && t < spec.rain_window[1]), s.userData.rain.userData.update(t);
   if (name === "station" && s.userData.train) {
     const tr = spec.train || {}; const arrive = tr.arrive ?? 2, depart = tr.depart ?? 1e9;
     let x = t < arrive ? lerp(160, -50, ease((t - (arrive - 6)) / 6)) : -50;
@@ -333,12 +338,15 @@ window.load = async (s) => {
   if (spec.lang === "en+ja") document.body.classList.add("bi");
   $("badge").textContent = spec.lang === "en+ja" ? "AI SIMULATION · NOT A REAL EVENT · 実際の出来事ではありません" : spec.lang === "en" ? "AI SIMULATION · NOT A REAL EVENT" : "AIシミュレーション｜実際の出来事ではありません";
   renderer = new THREE.WebGLRenderer({ canvas: $("gl"), antialias: true, preserveDrawingBuffer: true });
-  renderer.setSize(W, H, false); renderer.shadowMap.enabled = true; renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.setSize(W, H, false); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = spec.exposure ?? 1.15;
+  post = makePost(renderer, W, H);
+  await document.fonts.load('900 40px "JP"');
   camera = new THREE.PerspectiveCamera(42, W / H, 0.5, 900);
   const needed = new Set((spec.scenes || []).map((x) => x.scene));
   if (needed.has("map")) japan = await (await fetch("../vendor/japan.json")).json();
   const pal = PALETTES[spec.time_of_day] || PALETTES.night, crowd = spec.crowd || 120, seed = spec.seed || 7;
-  const builders = { city: buildCity, station: buildStation, fuji: buildFuji, beach: buildBeach, map: buildMap };
+  const builders = { street: (p, c, r) => buildStreet(spec, r, (s, box) => addCrowd(s, r, c, box, 0, "z")), city: buildCity, station: buildStation, fuji: buildFuji, beach: buildBeach, map: buildMap };
   for (const n of needed) scenes[n] = n === "earth" ? buildEarth() : builders[n](pal, crowd, rng(seed + n.length));
   await document.fonts.ready; return "ok";
 };
@@ -364,5 +372,6 @@ window.renderAt = (t) => {
     const [pos, look] = s.userData.cam(t - sc.t0, sc.camera); const [sx, sy] = shake(t);
     camera.position.set(pos.x + sx, pos.y + sy, pos.z); camera.lookAt(look);
   }
-  renderer.render(s, camera); setUI(t, s, sc.scene); return true;
+  const dark = sc.scene === "street" || sc.scene === "earth" || spec.time_of_day === "night";
+  post.render(s, camera, t, { bloom: dark ? 0.8 : 0.3, threshold: dark ? 0.82 : 1.6, vignette: dark ? 0.9 : 0.55, grain: dark ? 0.045 : 0.025, ...(spec.look || {}) }); setUI(t, s, sc.scene); return true;
 };
