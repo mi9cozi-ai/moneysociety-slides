@@ -1,0 +1,293 @@
+{
+  "id": "gravity-half",
+  "lang": "en+ja",
+  "seed": 53,
+  "title_html": "What if <em>gravity</em><br>were cut in half?",
+  "title_plain": "What if gravity in Japan were cut in half?",
+  "title_html_ja": "もしも重力が半分になったら？",
+  "setting": "Evening, on a train platform in Japan.",
+  "setting_ja": "夕方、日本の駅のホームで。",
+  "duration": 78,
+  "time_of_day": "sunset",
+  "crowd": 12,
+  "scene": "station",
+  "music": {
+    "mood": "wonder"
+  },
+  "title_window": [
+    0,
+    5
+  ],
+  "countdowns": [
+    {
+      "label": "Gravity halves in",
+      "show_from": 8,
+      "zero_at": 12
+    },
+    {
+      "label": "Moon gravity in",
+      "show_from": 41,
+      "zero_at": 45
+    }
+  ],
+  "train": {
+    "arrive": 3,
+    "depart": 38
+  },
+  "actions": [
+    {
+      "t": 12,
+      "type": "shake",
+      "dur": 1.5,
+      "amp": 0.3
+    },
+    {
+      "t": 12.6,
+      "type": "jump",
+      "height": 2.4,
+      "spread": 1.2
+    },
+    {
+      "t": 28.5,
+      "type": "jump",
+      "height": 3.2,
+      "spread": 0.8
+    },
+    {
+      "t": 31.5,
+      "type": "jump",
+      "height": 3.2,
+      "spread": 0.8
+    },
+    {
+      "t": 45,
+      "type": "shake",
+      "dur": 1.5,
+      "amp": 0.4
+    },
+    {
+      "t": 45.6,
+      "type": "jump",
+      "height": 5,
+      "spread": 1.2
+    },
+    {
+      "t": 53,
+      "type": "jump",
+      "height": 8,
+      "spread": 0.6
+    },
+    {
+      "t": 56,
+      "type": "jump",
+      "height": 8,
+      "spread": 0.6
+    }
+  ],
+  "sky": [
+    {
+      "t": 45,
+      "to": "#5a6fa8",
+      "dur": 4
+    },
+    {
+      "t": 59,
+      "to": "#1d2850",
+      "dur": 5
+    }
+  ],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 20,
+      "scene": "station",
+      "camera": "side"
+    },
+    {
+      "t0": 20,
+      "t1": 41,
+      "scene": "station",
+      "camera": "side"
+    },
+    {
+      "t0": 41,
+      "t1": 78,
+      "scene": "station",
+      "camera": "high"
+    }
+  ],
+  "captions": [
+    {
+      "t0": 5,
+      "t1": 8,
+      "html": "Earth's pull: <b>9.8 m/s²</b>.<br>Air at street level: <b>1,013 hPa</b>.",
+      "html_ja": "今の重力は<b>9.8 m/s²</b>。<br>地上の気圧は約<b>1,013 hPa</b>。"
+    },
+    {
+      "t0": 8,
+      "t1": 12,
+      "html": "Let's cut gravity <b>in half</b><br>and see what changes.",
+      "html_ja": "重力を<b>半分</b>にして、<br>何が変わるか見てみよう。"
+    },
+    {
+      "t0": 12,
+      "t1": 16,
+      "html": "<b>Everyone feels light!</b>",
+      "html_ja": "<b>体が軽い！</b>"
+    },
+    {
+      "t0": 41,
+      "t1": 45,
+      "html": "Then what if it were<br>as weak as <b>the Moon's</b>?",
+      "sfx": "twist",
+      "html_ja": "では、<b>月の重力</b>なら？"
+    },
+    {
+      "t0": 45,
+      "t1": 48.5,
+      "html": "<b>Lighter…</b>",
+      "html_ja": "<b>もっと軽く…</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 16,
+      "t1": 20,
+      "from": 9.8,
+      "to": 4.9,
+      "decimals": 1,
+      "suffix": " m/s²",
+      "label": "Gravity ÷ 2",
+      "label_ja": "重力 ÷ 2",
+      "run": 2.5
+    },
+    {
+      "t0": 48.5,
+      "t1": 52,
+      "from": 4.9,
+      "to": 1.62,
+      "decimals": 2,
+      "suffix": " m/s²",
+      "label": "Moon gravity (about 1/6)",
+      "label_ja": "月の重力（約1/6）",
+      "run": 2.5
+    }
+  ],
+  "effects": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "n": 1,
+      "total": 5,
+      "tag": "BODY",
+      "head": "A 60 kg person<br>weighs like <b>30 kg</b>",
+      "sub": "Weight = mass × gravity.<br>Same body, <b>half the pull</b>.",
+      "head_ja": "60 kgの人が<b>30 kgぶん</b>の重さに",
+      "sub_ja": "重さ＝質量×重力。体は同じ、引く力が半分。"
+    },
+    {
+      "t0": 27,
+      "t1": 34,
+      "n": 2,
+      "total": 5,
+      "tag": "JUMP",
+      "head": "Every jump goes<br><b>2× higher</b>",
+      "sub": "Jump height = v² ÷ 2g.<br>Half the gravity, <b>double the height</b>.",
+      "head_ja": "ジャンプが<b>2倍</b>の高さに",
+      "sub_ja": "高さ＝v²÷2g。重力が半分なら高さは2倍。"
+    },
+    {
+      "t0": 34,
+      "t1": 41,
+      "n": 3,
+      "total": 5,
+      "tag": "WALK",
+      "head": "You start running at<br><b>about 1.4 m/s</b> (estimate)",
+      "sub": "Lab tests: walk→run speed ∝ √g (1.98 m/s now).<br>Japan's <b>80 m/min</b> walk (1.33 m/s) is almost a jog.",
+      "head_ja": "走り出す速さが<b>約1.4 m/s</b>に（推定）",
+      "sub_ja": "実験では切り替え速度∝√g（今は1.98 m/s）。分速80 mはほぼ小走り。"
+    },
+    {
+      "t0": 52,
+      "t1": 59,
+      "n": 4,
+      "total": 5,
+      "tag": "JUMP",
+      "head": "Jumps go<br><b>about 6× higher</b>",
+      "sub": "A phone dropped from 1.5 m falls for<br><b>1.36 s</b> instead of 0.55 s (t = √(2h/g)).",
+      "head_ja": "ジャンプが<b>約6倍</b>の高さに",
+      "sub_ja": "1.5 mから落としたスマホは0.55秒→1.36秒。",
+      "pos": "bottom"
+    },
+    {
+      "t0": 59,
+      "t1": 67,
+      "n": 5,
+      "total": 5,
+      "tag": "AIR",
+      "head": "Street air as thin as<br><b>about 13 km up</b> (estimate)",
+      "sub": "Air pressure is the weight of the air:<br>1,013 → <b>about 167 hPa</b>.<br>Like 3.4 Mt. Fujis high.",
+      "head_ja": "地上の空気が<b>高度約13 km</b>なみ（推定）",
+      "sub_ja": "気圧は空気の重さ。1,013→約167 hPa。富士山3.4個ぶんの高さ。"
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 12.6,
+      "t1": 16,
+      "text": "Whoa, I'm floating!",
+      "person": 3
+    },
+    {
+      "t0": 13,
+      "t1": 16,
+      "text": "So light!",
+      "person": 7
+    },
+    {
+      "t0": 46,
+      "t1": 49,
+      "text": "Wheee!",
+      "person": 5
+    }
+  ],
+  "end": {
+    "t0": 67,
+    "html": "<h1>What we learned:<br><b>Gravity sets the size of everything.</b><br>Weight, jumps, walking — even the air.</h1><p class='jaend'>わかったこと：<b>重力がすべての「大きさ」を決めている。</b><br>体重、ジャンプ、歩き方、そして空気の濃さまで。</p><h2>Assumptions</h2><p>· Only gravity changes; same body, same amount of air<br>· Simple physics rules; air resistance ignored for jumps<br>· Air heights from Earth's standard atmosphere (estimate)</p><h2>Sources</h2><p>· Gravity of Earth and Moon: NASA Moon Fact Sheet<br>· Walk-run switch: Kram et al., J. Exp. Biol. 1997<br>· 80 m per minute: real-estate display rules (glossary)<br>· Air pressure = weight of air: Penn State Meteo 3<br>· Pressure vs height: U.S. Standard Atmosphere table<br>· Mt. Fuji 3,776 m: Cabinet Office (Bousai)</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if gravity in Japan were cut in half? 🚉\nもしも日本の重力が半分になったら？\n\nToday: gravity 9.8 m/s², air at street level ≈ 1,013 hPa.\n½ gravity (4.9 m/s²)\n① A 60 kg person weighs like 30 kg (weight = mass × g)\n② Every jump goes 2× higher (height = v²/2g)\n③ You switch from walking to running at ~1.4 m/s (estimate), not ~2.0 m/s — Japan's \"80 m per minute\" walk (1.33 m/s) is almost a jog\nMoon gravity (1.62 m/s², about 1/6)\n④ Jumps go about 6× higher; a phone dropped from 1.5 m falls for 1.36 s instead of 0.55 s\n⑤ The same air weighs 1/6 → about 167 hPa at street level, like about 13 km up (estimate)\nLesson: gravity sets the size of everything — weight, jumps, walking, even the air.\n\n今の重力は9.8 m/s²、地上の気圧は約1,013 hPa。\n重力½（4.9 m/s²）\n① 60 kgの人の体重が30 kgぶんに（重さ＝質量×重力）\n② ジャンプの高さが2倍に（高さ＝v²/2g）\n③ 歩きから走りに切り替わる速さが約2.0→約1.4 m/s（推定）。不動産の「分速80 m」（1.33 m/s）はほぼ小走り\n月の重力（1.62 m/s²、約1/6）\n④ ジャンプは約6倍の高さ。1.5 mから落としたスマホは0.55秒→1.36秒\n⑤ 空気の重さも1/6 → 地上の気圧は約167 hPa、高度約13 kmなみ（推定）\nわかったこと：重力がすべての「大きさ」を決めている。\n\nSources / 出典: NASA Moon Fact Sheet, Kram et al. (J. Exp. Biol. 1997), 不動産表示ルール（用語集）, Penn State Meteo 3, U.S. Standard Atmosphere table, 内閣府防災（富士山3,776 m）\nAssumptions / 前提: only gravity changes; same body and same amount of air; simple physics, air resistance ignored for jumps; air heights from Earth's standard atmosphere (estimate).\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #gravity #重力 #science #雑学",
+  "facts_check": {
+    "g_earth": 9.8,
+    "g_moon": 1.62,
+    "g_half": 4.9,
+    "moon_ratio": 0.1653,
+    "moon_jump_x": 6.05,
+    "weight_60kg_half": 29.999999999999996,
+    "weight_60kg_moon": 9.9,
+    "fall_1p5m_s": {
+      "earth": 0.553,
+      "half": 0.782,
+      "moon": 1.361
+    },
+    "walk_run_1g_ms": 1.98,
+    "walk_run_half_ms": 1.4,
+    "jp_walk_80m_per_min_ms": 1.333,
+    "p0_hpa": 1013,
+    "p_half_hpa": 506.5,
+    "p_moon_hpa": 167.5,
+    "alt_p_half_m": 5476,
+    "alt_p_moon_m": 12910,
+    "fuji_m": 3776,
+    "moon_alt_in_fujis": 3.42
+  },
+  "sources": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "https://cob.silverchair.com/jeb/article/200/4/821/7425/Effect-of-reduced-gravity-on-the-preferred-walk",
+    "https://smtrc.jp/useful/glossary/detail/n/2217",
+    "https://courses.ems.psu.edu/meteo3/node/2000",
+    "https://meteorologytraining.tpub.com/14269/css/14269_75.htm",
+    "https://www.atmos.albany.edu/facstaff/landin/f211/Ch3-Maps.html",
+    "https://www.bousai.go.jp/kohou/kouhoubousai/h24/70/volcano.html"
+  ],
+  "cover_ms": 22000
+}

@@ -6,6 +6,8 @@ import wave
 
 import numpy as np
 
+import music as moods
+
 SR = 44100
 BPM = 100
 BEAT = 60 / BPM
@@ -130,9 +132,13 @@ def build(spec, path):
                 return 0.6 + 0.4 * (t - (c["zero_at"] - 10)) / 10
         if spec.get("end") and t >= spec["end"]["t0"]:
             return 0.3
-        return 0.5
+        tw = spec.get("title_window") or [0, 5]
+        if t < tw[1]:
+            return 0.35
+        return 0.55
 
-    buf = music(dur, level) * 0.9
+    mus, mood = moods.render(spec, dur, level)
+    buf = np.zeros(int(dur * SR))  # sound effects (mono)
     for c in cds:
         for k in range(10):
             tt = c["zero_at"] - 10 + k
@@ -160,8 +166,11 @@ def build(spec, path):
     if spec.get("end"):
         for semi in (0, 3, 7, 12):
             add(buf, tone(note_hz(semi + 12), 3.5, "sine", 0.3, 1.6), spec["end"]["t0"], 0.07)
-    peak = np.max(np.abs(buf)) or 1
-    buf = np.tanh(buf / peak * 1.4) * 0.85
-    pcm = (buf * 32767).astype(np.int16)
+    mus = mus / (np.max(np.abs(mus)) or 1) * 0.55
+    fx = buf / (np.max(np.abs(buf)) or 1) * 0.6
+    out = mus[: len(fx)] + fx[: len(mus), None]
+    out = np.tanh(out * 1.3) * 0.9
+    pcm = (out * 32767).astype(np.int16)
+    print("music mood:", mood)
     with wave.open(str(path), "wb") as w:
-        w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())

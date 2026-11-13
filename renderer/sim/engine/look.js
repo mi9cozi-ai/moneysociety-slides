@@ -265,3 +265,42 @@ export function makePost(renderer, W, H) {
     },
   };
 }
+
+// ---------- shared scenery for the older scenes ----------
+export { facadeTex, lamp, utilityPole, wires };
+export const SKY = {
+  day: [0x3d7cc9, 0xc4dcef], sunset: [0x2f3a68, 0xf3a372], night: [0x04070e, 0x1c2742],
+};
+export function skyDome(top, horizon) {
+  const m = new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false,
+    uniforms: { top: { value: new THREE.Color(top) }, hor: { value: new THREE.Color(horizon) } },
+    vertexShader: `varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `uniform vec3 top, hor; varying vec3 vP; void main(){ float h = clamp(vP.y, 0.0, 1.0); gl_FragColor = vec4(mix(hor, top, pow(h, 0.55)), 1.0); }` });
+  const d = new THREE.Mesh(new THREE.SphereGeometry(850, 24, 16), m); d.renderOrder = -1; d.frustumCulled = false; return d;
+}
+// smooth (non-pixel) noisy ground texture, tiled
+export function groundTex(base, r, repeat = 20, amt = 0.18, specks = null) {
+  const c = document.createElement("canvas"); c.width = c.height = 128; const g = c.getContext("2d");
+  for (let y = 0; y < 128; y += 2) for (let x = 0; x < 128; x += 2) { g.fillStyle = shade(base, 1 - amt / 2 + r() * amt); g.fillRect(x, y, 2, 2); }
+  if (specks) for (let i = 0; i < 120; i++) { g.fillStyle = specks; g.fillRect(r() * 128, r() * 128, 2, 2); }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(repeat, repeat); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
+}
+export function pineTree(r) {
+  const g = new THREE.Group(), trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.28, 4.5, 6), S(0x5a4232));
+  trunk.position.y = 2.25; trunk.rotation.z = (r() - 0.5) * 0.3; g.add(trunk);
+  for (let i = 0; i < 3; i++) { const cl = new THREE.Mesh(new THREE.DodecahedronGeometry(1.1 + r() * 0.6, 0), S(pick(r, [0x2f5a3a, 0x355f3c, 0x2a4f34]), 0.9, { flatShading: true }));
+    cl.scale.y = 0.45; cl.position.set((r() - 0.5) * 2, 3.6 + i * 0.9, (r() - 0.5) * 2); cl.castShadow = true; g.add(cl); }
+  return g;
+}
+export function tetrapod() {
+  const g = new THREE.Group(), m = S(0xa8a49c, 0.95, { flatShading: true });
+  const dirs = [[0, 1, 0], [0.943, -0.333, 0], [-0.471, -0.333, 0.816], [-0.471, -0.333, -0.816]];
+  for (const d of dirs) { const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.55, 1.6, 7), m);
+    leg.position.set(d[0] * 0.75, d[1] * 0.75, d[2] * 0.75); leg.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), new THREE.Vector3(...d)); leg.castShadow = true; g.add(leg); }
+  return g;
+}
+export function cloud(r) {
+  const g = new THREE.Group(), m = S(0xf4f6fa, 1, { flatShading: true, emissive: 0x7a8494, emissiveIntensity: 0.25 });
+  for (let i = 0; i < 6; i++) { const b = new THREE.Mesh(new THREE.DodecahedronGeometry(6 + r() * 7, 0), m); b.position.set((r() - 0.5) * 30, (r() - 0.3) * 5, (r() - 0.5) * 12); b.scale.y = 0.6; g.add(b); }
+  return g;
+}

@@ -96,7 +96,7 @@ def main():
         return
     if chunk:
         subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "%05d.jpg"),
-                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-preset", "medium", "-crf", "20",
+                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-preset", "medium", "-crf", "21", "-maxrate", "10M", "-bufsize", "20M",
                         "-r", str(FPS), str(out / f"seg_{chunk[0]:02d}.mp4")], check=True)
         shutil.rmtree(frames)
         print(out / f"seg_{chunk[0]:02d}.mp4")
@@ -104,7 +104,7 @@ def main():
     soundtrack(spec, out / "audio.wav")
     subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "%05d.jpg"),
                     "-i", str(out / "audio.wav"), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high",
-                    "-preset", "medium", "-crf", "20", "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-shortest",
+                    "-preset", "medium", "-crf", "21", "-maxrate", "10M", "-bufsize", "20M", "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-shortest",
                     "-movflags", "+faststart", str(out / "reel.mp4")], check=True)
     shutil.rmtree(frames)
     (out / "caption.txt").write_text(spec["caption"], encoding="utf-8")
