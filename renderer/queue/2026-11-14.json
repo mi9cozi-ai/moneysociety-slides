@@ -1,0 +1,341 @@
+{
+  "id": "moon-twice-as-close",
+  "lang": "en+ja",
+  "seed": 67,
+  "title_html": "What if the <em>Moon</em><br>were 2× closer?",
+  "title_html_ja": "もしも月が2倍近かったら？",
+  "title_plain": "What if the Moon were 2× closer?",
+  "setting": "A spring-tide night on Japan's coast.",
+  "setting_ja": "大潮の夜、日本の海辺で。",
+  "duration": 78,
+  "time_of_day": "night",
+  "crowd": 10,
+  "scene": "beach",
+  "music": {
+    "mood": "epic"
+  },
+  "title_window": [
+    0,
+    5
+  ],
+  "countdowns": [
+    {
+      "label": "Moon 2× closer in",
+      "show_from": 8,
+      "zero_at": 12
+    },
+    {
+      "label": "Moon 3× closer in",
+      "show_from": 40,
+      "zero_at": 44
+    }
+  ],
+  "actions": [
+    {
+      "t": 12,
+      "type": "shake",
+      "dur": 3,
+      "amp": 0.4
+    },
+    {
+      "t": 20,
+      "type": "sea_level",
+      "from": 0.3,
+      "to": 1.6,
+      "dur": 5
+    },
+    {
+      "t": 33,
+      "type": "sea_level",
+      "from": 1.6,
+      "to": -2.0,
+      "dur": 5
+    },
+    {
+      "t": 44,
+      "type": "shake",
+      "dur": 3.5,
+      "amp": 0.7
+    },
+    {
+      "t": 51,
+      "type": "sea_level",
+      "from": -2.0,
+      "to": 2.6,
+      "dur": 3.5
+    },
+    {
+      "t": 56,
+      "type": "sea_level",
+      "from": 2.6,
+      "to": -4.0,
+      "dur": 3
+    },
+    {
+      "t": 61,
+      "type": "sea_level",
+      "from": -4.0,
+      "to": 2.0,
+      "dur": 3
+    }
+  ],
+  "sky": [
+    {
+      "t": 12,
+      "to": "#2c3e66",
+      "dur": 4
+    },
+    {
+      "t": 44,
+      "to": "#3f5a8c",
+      "dur": 4
+    }
+  ],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 20,
+      "scene": "beach",
+      "camera": "side"
+    },
+    {
+      "t0": 20,
+      "t1": 40,
+      "scene": "beach",
+      "camera": "high"
+    },
+    {
+      "t0": 40,
+      "t1": 58,
+      "scene": "beach",
+      "camera": "side"
+    },
+    {
+      "t0": 58,
+      "t1": 78,
+      "scene": "beach",
+      "camera": "high"
+    }
+  ],
+  "captions": [
+    {
+      "t0": 5,
+      "t1": 8,
+      "html": "The Moon: <b>384,400 km</b> away.<br>Japan's biggest tides: <b>~6 m</b>.",
+      "html_ja": "月までは384,400 km。<br>日本一の干満差は有明海の<b>約6 m</b>。"
+    },
+    {
+      "t0": 8,
+      "t1": 12,
+      "html": "Let's pull the Moon<br><b>2× closer</b> and watch the sea.",
+      "html_ja": "月を<b>2倍</b>近づけて、<br>海を見てみよう。"
+    },
+    {
+      "t0": 12,
+      "t1": 16,
+      "html": "<b>It's coming closer!</b>",
+      "html_ja": "<b>月が近づく！</b>"
+    },
+    {
+      "t0": 40,
+      "t1": 44,
+      "html": "Then what if it were<br><b>3× closer</b>?",
+      "sfx": "twist",
+      "html_ja": "では、<b>3倍</b>近かったら？"
+    },
+    {
+      "t0": 44,
+      "t1": 47.5,
+      "html": "<b>Closer…</b>",
+      "html_ja": "<b>もっと近く…</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 16,
+      "t1": 20,
+      "from": 384400,
+      "to": 192200,
+      "suffix": " km",
+      "label": "Moon distance ÷ 2",
+      "label_ja": "月までの距離 ÷ 2",
+      "run": 2.5
+    },
+    {
+      "t0": 47.5,
+      "t1": 51,
+      "from": 192200,
+      "to": 128133,
+      "suffix": " km",
+      "label": "Moon distance ÷ 3",
+      "label_ja": "月までの距離 ÷ 3",
+      "run": 2.5
+    }
+  ],
+  "effects": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "n": 1,
+      "total": 5,
+      "tag": "TIDES",
+      "head": "The Moon's pull on the sea:<br><b>8× stronger</b>",
+      "sub": "Tidal force ∝ 1/distance³ → 2³ = 8.<br>Ariake Sea tides: 6 m → <b>~34 m</b> (estimate).",
+      "head_ja": "海を引く月の力が<b>8倍</b>に",
+      "sub_ja": "潮の力は距離の3乗に反比例。有明海の干満差 6 m→約34 m（推定）。"
+    },
+    {
+      "t0": 27,
+      "t1": 33,
+      "n": 2,
+      "total": 5,
+      "tag": "SKY",
+      "head": "The Moon looks<br><b>2× wider</b>",
+      "sub": "<b>4×</b> the area in the sky. 2026's closest<br>full moon is only <b>14%</b> wider than the farthest.",
+      "head_ja": "月が<b>2倍</b>の大きさに見える",
+      "sub_ja": "空での面積は4倍。2026年で最も近い満月でも、最も遠い満月より14%大きいだけ。"
+    },
+    {
+      "t0": 33,
+      "t1": 40,
+      "n": 3,
+      "total": 5,
+      "tag": "TIME",
+      "head": "A full moon every<br><b>~10 days</b>",
+      "sub": "Kepler's 3rd law: period² ∝ distance³.<br>Today: every <b>29.5 days</b>.",
+      "head_ja": "満月が<b>約10日</b>ごとに",
+      "sub_ja": "ケプラーの第3法則で計算。今は29.5日ごと。"
+    },
+    {
+      "t0": 51,
+      "t1": 58,
+      "n": 4,
+      "total": 5,
+      "tag": "TIDES",
+      "head": "Pull <b>27×</b> stronger:<br>Ariake swings <b>~110 m</b>",
+      "sub": "About <b>18 m every hour</b> (estimate).<br>Today a spring tide drops ~5 m in 6 hours.",
+      "head_ja": "潮の力が<b>27倍</b>。有明海の干満差は<b>約110 m</b>",
+      "sub_ja": "平均で1時間に約18 m（推定）。今の大潮は6時間で約5 m。"
+    },
+    {
+      "t0": 58,
+      "t1": 66,
+      "n": 5,
+      "total": 5,
+      "tag": "TIME",
+      "head": "A full moon every<br><b>~5 days</b>",
+      "sub": "The Moon circles Earth in <b>5.3 days</b> (now 27.3).<br>Spring tides come every <b>~2.7 days</b>.",
+      "head_ja": "満月が<b>約5日</b>ごとに",
+      "sub_ja": "月は5.3日で地球を1周（今は27.3日）。大潮は約2.7日ごと。",
+      "pos": "bottom"
+    }
+  ],
+  "gauges": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "label": "Ariake<br>tide range",
+      "label_ja": "有明海の干満差",
+      "from": 6,
+      "to": 34,
+      "delay": 0.6,
+      "run": 3,
+      "min": 0,
+      "max": 120,
+      "unit": " m",
+      "decimals": 0
+    },
+    {
+      "t0": 51,
+      "t1": 58,
+      "label": "Ariake<br>tide range",
+      "label_ja": "有明海の干満差",
+      "from": 34,
+      "to": 110,
+      "delay": 0.6,
+      "run": 3,
+      "min": 0,
+      "max": 120,
+      "unit": " m",
+      "decimals": 0
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 12.5,
+      "t1": 16,
+      "text": "The Moon is huge!",
+      "person": 2
+    },
+    {
+      "t0": 21,
+      "t1": 25,
+      "text": "The sea is coming!",
+      "person": 5
+    },
+    {
+      "t0": 52,
+      "t1": 56,
+      "text": "Run!",
+      "person": 3
+    }
+  ],
+  "end": {
+    "t0": 66,
+    "html": "<h1>What we learned:<br><b>The Moon runs the sea's clock.</b><br>Half the distance → 8× the tide.</h1><p class='jaend'>わかったこと：<b>月は海の時計。</b><br>距離が半分なら、潮を動かす力は8倍。<br>月の距離が、潮の高さと「ひと月」の長さを決めている。</p><h2>Assumptions</h2><p>· Tide range scales with tidal force (Sun = ½ Moon)<br>· Bay shape, resonance and orbit changes ignored<br>· Effects marked (estimate) are simple calculations</p><h2>Sources</h2><p>· Distance, periods: NASA Moon &amp; Earth fact sheets<br>· Tidal force ∝ 1/d³, spring tides: NOAA<br>· Ariake Sea 6 m tides: Japan Coast Guard<br>· Full moon size 2026: NAOJ<br>· Kepler's 3rd law: NASA</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if the Moon were 2× closer? 🌕\nもしも月が2倍近かったら？\n\nToday the Moon is 384,400 km away (NASA). Japan's biggest tides: the Ariake Sea, up to ~6 m (Japan Coast Guard).\n2× closer (192,200 km)\n① The Moon's pull on the sea ×8 (tidal force ∝ 1/distance³) → Ariake tides ~34 m (estimate)\n② The Moon looks 2× wider, 4× the area. 2026's closest full moon is only 14% wider than the farthest (NAOJ)\n③ Full moon every ~9.9 days instead of 29.5 (Kepler's 3rd law)\n3× closer (128,133 km)\n④ Pull ×27 → Ariake tides ~110 m, ~18 m per hour on average (estimate)\n⑤ The Moon circles Earth in 5.3 days; full moon every ~5.3 days, spring tides every ~2.7 days\nLesson: the Moon runs the sea's clock. Half the distance → 8× the tide.\n\n今の月までの距離は384,400 km（NASA）。日本一の干満差は有明海の約6 m（海上保安庁）。\n2倍近い（192,200 km）\n① 海を引く力が8倍（潮の力は距離の3乗に反比例）→ 有明海の干満差 約34 m（推定）\n② 月の見かけの直径が2倍、面積は4倍。2026年で最も近い満月でも最も遠い満月より14%大きいだけ（国立天文台）\n③ 満月が約9.9日ごとに（今は29.5日・ケプラーの第3法則）\n3倍近い（128,133 km）\n④ 潮の力が27倍 → 有明海の干満差 約110 m、平均で1時間に約18 m（推定）\n⑤ 月は5.3日で地球を1周。満月は約5.3日ごと、大潮は約2.7日ごと\nわかったこと：月は海の時計。距離が半分なら潮の力は8倍。\n\nSources / 出典: NASA (Moon & Earth fact sheets, Kepler's laws), NOAA (tides), 海上保安庁 三池海上保安部, 国立天文台\nAssumptions / 前提: tide range scales with tidal force (Sun's pull = half the Moon's); bay shape, resonance and orbit changes are ignored.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #月 #moon #science #雑学",
+  "facts_check": {
+    "moon_distance_km": 384400,
+    "sidereal_month_d": 27.3217,
+    "synodic_month_d": 29.53,
+    "earth_year_d": 365.256,
+    "synodic_check_now": 29.531,
+    "sun_tide_vs_moon": 0.5,
+    "ariake_range_m": 6.0,
+    "jcg_example_drop": "~5 m in 6 h",
+    "supermoon_diam_ratio": 1.137,
+    "x2": {
+      "distance_km": 192200.0,
+      "tidal_force_x": 8,
+      "period_d": 9.66,
+      "synodic_d": 9.922,
+      "spring_tide_interval_d": 4.961,
+      "range_scale": 5.667,
+      "ariake_range_m": 34.0,
+      "avg_m_per_hour_6h": 5.67,
+      "diameter_x": 2,
+      "area_x": 4
+    },
+    "x3": {
+      "distance_km": 128133.3,
+      "tidal_force_x": 27,
+      "period_d": 5.258,
+      "synodic_d": 5.335,
+      "spring_tide_interval_d": 2.667,
+      "range_scale": 18.333,
+      "ariake_range_m": 110.0,
+      "avg_m_per_hour_6h": 18.33,
+      "diameter_x": 3,
+      "area_x": 9
+    },
+    "rules": [
+      "tidal force ∝ 1/d³ (NOAA)",
+      "period² ∝ distance³ (Kepler 3rd law, NASA)",
+      "synodic = 1/(1/P − 1/year)",
+      "apparent diameter ∝ 1/d, area ∝ 1/d²",
+      "spring range ∝ (moon×k³ + sun 0.5)/(1+0.5)"
+    ]
+  },
+  "sources": [
+    "https://science.nasa.gov/moon/facts/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html",
+    "https://oceanservice.noaa.gov/education/tutorial_tides/tides06_variations.html",
+    "https://www.kaiho.mlit.go.jp/07kanku/miike/benri/chouisa/chouisa.html",
+    "https://www.nao.ac.jp/astro/sky/2026/12-topics04.html",
+    "https://science.nasa.gov/solar-system/orbits-and-keplers-laws/"
+  ],
+  "cover_ms": 22000
+}
