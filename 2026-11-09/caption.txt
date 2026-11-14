@@ -1,0 +1,29 @@
+What if Mt. Fuji were twice as tall? 🗻
+もしも富士山が2倍の高さだったら？
+
+August at the summit averages 6.4°C (JMA). Air cools about 0.65°C per 100 m.
+×2 (7,552 m)
+① Summer summit ≈ −18°C, like Fuji's January today
+② Below 0°C all year → snow could stay (estimate)
+③ Air pressure ≈ 383 hPa → about 38% of sea-level oxygen
+×3 (11,328 m)
+④ August summit ≈ −43°C, colder than the record low (−38.0°C)
+⑤ The peak reaches the jet stream (30,000–40,000 ft)
+Lesson: height is climate.
+
+山頂の8月の平均気温は6.4°C（気象庁）。気温は100 m上がるごとに約0.65°C下がる。
+2倍（7,552 m）
+① 夏の山頂が約−18°C（今の1月なみ）
+② 一年中0°C以下 → 雪が溶けない（推定）
+③ 気圧は約383 hPa → 酸素は平地の約38%
+3倍（11,328 m）
+④ 8月の山頂が約−43°C（観測史上最低−38.0°Cより寒い）
+⑤ 山頂がジェット気流（高度約9〜12 km）に届く
+わかったこと：高さは気候を変える。
+
+Sources / 出典: 国土地理院, 気象庁（平年値・羽田航空気象観測所）, 環境省, 世界大百科事典（気温減率）, 高度と気圧の表
+Assumptions / 前提: simple estimate with a standard lapse rate; real geology and weather are ignored.
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #富士山 #mtfuji #science #雑学

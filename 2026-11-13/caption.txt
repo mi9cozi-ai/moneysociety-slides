@@ -1,0 +1,29 @@
+What if gravity in Japan were cut in half? 🚉
+もしも日本の重力が半分になったら？
+
+Today: gravity 9.8 m/s², air at street level ≈ 1,013 hPa.
+½ gravity (4.9 m/s²)
+① A 60 kg person weighs like 30 kg (weight = mass × g)
+② Every jump goes 2× higher (height = v²/2g)
+③ You switch from walking to running at ~1.4 m/s (estimate), not ~2.0 m/s — Japan's "80 m per minute" walk (1.33 m/s) is almost a jog
+Moon gravity (1.62 m/s², about 1/6)
+④ Jumps go about 6× higher; a phone dropped from 1.5 m falls for 1.36 s instead of 0.55 s
+⑤ The same air weighs 1/6 → about 167 hPa at street level, like about 13 km up (estimate)
+Lesson: gravity sets the size of everything — weight, jumps, walking, even the air.
+
+今の重力は9.8 m/s²、地上の気圧は約1,013 hPa。
+重力½（4.9 m/s²）
+① 60 kgの人の体重が30 kgぶんに（重さ＝質量×重力）
+② ジャンプの高さが2倍に（高さ＝v²/2g）
+③ 歩きから走りに切り替わる速さが約2.0→約1.4 m/s（推定）。不動産の「分速80 m」（1.33 m/s）はほぼ小走り
+月の重力（1.62 m/s²、約1/6）
+④ ジャンプは約6倍の高さ。1.5 mから落としたスマホは0.55秒→1.36秒
+⑤ 空気の重さも1/6 → 地上の気圧は約167 hPa、高度約13 kmなみ（推定）
+わかったこと：重力がすべての「大きさ」を決めている。
+
+Sources / 出典: NASA Moon Fact Sheet, Kram et al. (J. Exp. Biol. 1997), 不動産表示ルール（用語集）, Penn State Meteo 3, U.S. Standard Atmosphere table, 内閣府防災（富士山3,776 m）
+Assumptions / 前提: only gravity changes; same body and same amount of air; simple physics, air resistance ignored for jumps; air heights from Earth's standard atmosphere (estimate).
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #gravity #重力 #science #雑学

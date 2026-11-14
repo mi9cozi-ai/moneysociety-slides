@@ -1,0 +1,29 @@
+What if the Moon were 2× closer? 🌕
+もしも月が2倍近かったら？
+
+Today the Moon is 384,400 km away (NASA). Japan's biggest tides: the Ariake Sea, up to ~6 m (Japan Coast Guard).
+2× closer (192,200 km)
+① The Moon's pull on the sea ×8 (tidal force ∝ 1/distance³) → Ariake tides ~34 m (estimate)
+② The Moon looks 2× wider, 4× the area. 2026's closest full moon is only 14% wider than the farthest (NAOJ)
+③ Full moon every ~9.9 days instead of 29.5 (Kepler's 3rd law)
+3× closer (128,133 km)
+④ Pull ×27 → Ariake tides ~110 m, ~18 m per hour on average (estimate)
+⑤ The Moon circles Earth in 5.3 days; full moon every ~5.3 days, spring tides every ~2.7 days
+Lesson: the Moon runs the sea's clock. Half the distance → 8× the tide.
+
+今の月までの距離は384,400 km（NASA）。日本一の干満差は有明海の約6 m（海上保安庁）。
+2倍近い（192,200 km）
+① 海を引く力が8倍（潮の力は距離の3乗に反比例）→ 有明海の干満差 約34 m（推定）
+② 月の見かけの直径が2倍、面積は4倍。2026年で最も近い満月でも最も遠い満月より14%大きいだけ（国立天文台）
+③ 満月が約9.9日ごとに（今は29.5日・ケプラーの第3法則）
+3倍近い（128,133 km）
+④ 潮の力が27倍 → 有明海の干満差 約110 m、平均で1時間に約18 m（推定）
+⑤ 月は5.3日で地球を1周。満月は約5.3日ごと、大潮は約2.7日ごと
+わかったこと：月は海の時計。距離が半分なら潮の力は8倍。
+
+Sources / 出典: NASA (Moon & Earth fact sheets, Kepler's laws), NOAA (tides), 海上保安庁 三池海上保安部, 国立天文台
+Assumptions / 前提: tide range scales with tidal force (Sun's pull = half the Moon's); bay shape, resonance and orbit changes are ignored.
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #月 #moon #science #雑学
