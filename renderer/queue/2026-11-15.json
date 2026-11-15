@@ -1,0 +1,299 @@
+{
+  "id": "tokyo-820km-north",
+  "lang": "en+ja",
+  "seed": 29,
+  "title_html": "What if <em>Tokyo</em><br>moved 820 km north?",
+  "title_html_ja": "もしも東京が820 km北にあったら？",
+  "title_plain": "What if Tokyo moved 820 km north?",
+  "setting": "A winter day at a Tokyo crossing.",
+  "setting_ja": "冬の日、東京の交差点で。",
+  "duration": 78,
+  "time_of_day": "day",
+  "crowd": 16,
+  "scene": "city",
+  "music": {
+    "mood": "wonder"
+  },
+  "title_window": [
+    0,
+    5
+  ],
+  "countdowns": [
+    {
+      "label": "Tokyo moves in",
+      "show_from": 8,
+      "zero_at": 12
+    },
+    {
+      "label": "Arctic in",
+      "show_from": 40,
+      "zero_at": 44
+    }
+  ],
+  "actions": [
+    {
+      "t": 44,
+      "type": "shake",
+      "dur": 3,
+      "amp": 0.5
+    }
+  ],
+  "sky": [
+    {
+      "t": 20,
+      "to": "#a9bfd6",
+      "dur": 3
+    },
+    {
+      "t": 51,
+      "to": "#121a30",
+      "dur": 3
+    },
+    {
+      "t": 58,
+      "to": "#e8a86e",
+      "dur": 3
+    }
+  ],
+  "map_markers": [
+    {
+      "lon": 139.75,
+      "lat": 35.69,
+      "label": "Tokyo 35.7°N",
+      "t0": 12.5,
+      "height": 12,
+      "color": "#e0b25a",
+      "radius": 3
+    },
+    {
+      "lon": 139.75,
+      "lat": 43.06,
+      "label": "New Tokyo 43.1°N",
+      "t0": 14.5,
+      "height": 16,
+      "color": "#7fc4ff",
+      "radius": 3
+    }
+  ],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 12,
+      "scene": "city",
+      "camera": "orbit"
+    },
+    {
+      "t0": 12,
+      "t1": 20,
+      "scene": "map",
+      "camera": "top"
+    },
+    {
+      "t0": 20,
+      "t1": 40,
+      "scene": "city",
+      "camera": "high"
+    },
+    {
+      "t0": 40,
+      "t1": 51,
+      "scene": "earth",
+      "camera": "orbit"
+    },
+    {
+      "t0": 51,
+      "t1": 78,
+      "scene": "city",
+      "camera": "low"
+    }
+  ],
+  "captions": [
+    {
+      "t0": 5,
+      "t1": 8,
+      "html": "Tokyo: <b>35.7°N</b>. January avg <b>5.4°C</b>.<br>Snow: just <b>8 cm</b> a year.",
+      "html_ja": "東京は北緯35.7°。1月の平均<b>5.4°C</b>。<br>雪は1年で<b>8 cm</b>だけ。"
+    },
+    {
+      "t0": 8,
+      "t1": 12,
+      "html": "Let's slide Tokyo<br><b>820 km north</b> and see.",
+      "html_ja": "東京を<b>820 km北</b>へ<br>動かしてみよう。"
+    },
+    {
+      "t0": 12,
+      "t1": 16,
+      "html": "<b>Moving north…</b>",
+      "html_ja": "<b>北へ移動中…</b>"
+    },
+    {
+      "t0": 40,
+      "t1": 44,
+      "html": "Then what if it slid to<br>the <b>Arctic Circle</b>?",
+      "sfx": "twist",
+      "html_ja": "では、<b>北極圏</b>まで行ったら？"
+    },
+    {
+      "t0": 44,
+      "t1": 47.5,
+      "html": "<b>Farther…</b>",
+      "html_ja": "<b>もっと北へ…</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 16,
+      "t1": 20,
+      "from": 35.7,
+      "to": 43.1,
+      "decimals": 1,
+      "suffix": "°N",
+      "label": "Tokyo's latitude (+819 km)",
+      "label_ja": "東京の緯度（+819 km）",
+      "run": 2.5
+    },
+    {
+      "t0": 47.5,
+      "t1": 51,
+      "from": 43.1,
+      "to": 66.6,
+      "decimals": 1,
+      "suffix": "°N",
+      "label": "Tokyo's latitude (+3,429 km)",
+      "label_ja": "東京の緯度（+3,429 km）",
+      "run": 2.5
+    }
+  ],
+  "effects": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "n": 1,
+      "total": 5,
+      "tag": "CLIMATE",
+      "head": "January average:<br><b>about −3.2°C</b>",
+      "sub": "Like <b>Sapporo</b> at the same latitude (estimate).<br>Today's Tokyo: <b>5.4°C</b>.",
+      "head_ja": "1月の平均が<b>約−3.2°C</b>に",
+      "sub_ja": "同じ緯度の札幌なみ（推定）。今の東京は5.4°C。"
+    },
+    {
+      "t0": 27,
+      "t1": 33,
+      "n": 2,
+      "total": 5,
+      "tag": "SNOW",
+      "head": "Snow per year:<br><b>8 cm → 4.8 m</b>",
+      "sub": "About <b>60×</b> more. Snow falls on<br><b>~135 days</b>, not ~9 (estimate).",
+      "head_ja": "年間の雪が<b>8 cm→4.8 m</b>に",
+      "sub_ja": "約60倍。雪の日は約9日→約135日（推定）。"
+    },
+    {
+      "t0": 33,
+      "t1": 40,
+      "n": 3,
+      "total": 5,
+      "tag": "LIGHT",
+      "head": "Winter noon shadow:<br><b>2.3× your height</b>",
+      "sub": "Noon sun = 90 − latitude − 23.4<br>→ <b>23.5°</b> (now 30.9°, shadow 1.7×).",
+      "head_ja": "冬至の正午、影が<b>身長の2.3倍</b>に",
+      "sub_ja": "正午の太陽＝90−緯度−23.4→23.5°（今は30.9°、影1.7倍）。"
+    },
+    {
+      "t0": 51,
+      "t1": 58,
+      "n": 4,
+      "total": 5,
+      "tag": "DARK",
+      "head": "Winter solstice:<br><b>the sun never rises</b>",
+      "sub": "Noon sun = 90 − 66.6 − 23.4 ≈ <b>0°</b>.<br>A day with no sunrise (polar night).",
+      "head_ja": "冬至の日、<b>太陽が昇らない</b>",
+      "sub_ja": "正午の太陽＝90−66.6−23.4≈0°。日の出のない一日（極夜）。"
+    },
+    {
+      "t0": 58,
+      "t1": 66,
+      "n": 5,
+      "total": 5,
+      "tag": "LIGHT",
+      "head": "Summer solstice:<br><b>the sun never sets</b>",
+      "sub": "The <b>midnight sun</b>. Both come from<br>Earth's <b>23.4° tilt</b>.",
+      "head_ja": "夏至の日、<b>太陽が沈まない</b>",
+      "sub_ja": "真夜中の太陽（白夜）。どちらも地球の傾き23.4°のせい。"
+    }
+  ],
+  "gauges": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "label": "Tokyo<br>January",
+      "label_ja": "東京の1月",
+      "from": 5.4,
+      "to": -3.2,
+      "delay": 0.6,
+      "run": 3,
+      "min": -20,
+      "max": 20
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 12.5,
+      "t1": 16,
+      "text": "We're moving?!",
+      "person": 3
+    },
+    {
+      "t0": 52,
+      "t1": 55.5,
+      "text": "It's noon?!",
+      "person": 5
+    },
+    {
+      "t0": 59,
+      "t1": 62.5,
+      "text": "Still bright at midnight!",
+      "person": 9
+    }
+  ],
+  "end": {
+    "t0": 66,
+    "html": "<h1>What we learned:<br><b>Latitude is sunlight.</b><br>Farther north → lower sun → colder, darker winters.</h1><p class='jaend'>わかったこと：<b>緯度は日ざしを変える。</b><br>北へ行くほど太陽が低くなり、冬は寒く暗くなる。<br>季節をつくるのは地球の傾き23.4°。</p><h2>Assumptions</h2><p>· Only latitude changes; Sapporo's climate stands in for the new Tokyo (estimate)<br>· Real climate also depends on sea, mountains and winds<br>· 1° of latitude ≈ 111 km (Earth ≈ 40,000 km around)</p><h2>Sources</h2><p>· Climate normals 1991–2020 (Tokyo, Sapporo) &amp; station positions: JMA<br>· Noon-sun rule: National Astronomical Observatory of Japan<br>· Arctic Circle 66°33′N: Britannica / Mypedia (Kotobank)<br>· Earth's size: Geospatial Information Authority of Japan</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if Tokyo moved 820 km north? 🧭\nもしも東京が820 km北にあったら？\n\nTokyo sits at 35.7°N: January averages 5.4°C and only 8 cm of snow falls a year (JMA). Move it 820 km north to Sapporo's latitude (43.1°N):\n① January ≈ −3.2°C instead of 5.4°C (estimate, like Sapporo)\n② Snowfall 8 cm → 479 cm a year, about 60×; snow on ~135 days (estimate)\n③ Winter noon sun 30.9° → 23.5° (90 − latitude − 23.4) → your noon shadow grows from 1.7× to 2.3× your height\nThen the Arctic Circle (66°33′N, ≈3,430 km north):\n④ On the winter solstice the sun does not rise\n⑤ On the summer solstice the sun does not set — the midnight sun\nLesson: latitude is sunlight. Earth's 23.4° tilt makes the seasons.\n\n東京は北緯35.7°。1月の平均気温5.4°C、雪は年8 cmだけ（気象庁）。札幌と同じ北緯43.1°まで820 km北へ動かすと：\n① 1月の平均が約−3.2°C（推定・札幌なみ）\n② 降雪量 年8 cm→479 cm、約60倍。雪の日は約135日（推定）\n③ 冬至の正午の太陽 30.9°→23.5°（90−緯度−23.4）。正午の影が身長の1.7倍→2.3倍に\nさらに北極圏（北緯66°33′、約3,430 km北）へ：\n④ 冬至の日、太陽が昇らない（極夜）\n⑤ 夏至の日、太陽が沈まない（白夜）\nわかったこと：緯度は日ざしを変える。季節をつくるのは地球の傾き23.4°。\n\nSources / 出典: 気象庁（平年値1991–2020・観測所位置）, 国立天文台（南中高度）, コトバンク（北極圏）, 国土地理院（地球の大きさ）\nAssumptions / 前提: only latitude changes; Sapporo's climate stands in for the new Tokyo (estimate); 1° latitude ≈ 111 km.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #tokyo #science #雑学 #北極圏",
+  "facts_check": {
+    "tokyo_lat": 35.6917,
+    "sapporo_lat": 43.06,
+    "arctic_lat": 66.55,
+    "earth_circ_km": 40000,
+    "km_per_deg": 111.11,
+    "move1_km": 818.7,
+    "move2_km": 3428.7,
+    "tokyo_winter_noon_deg": 30.91,
+    "sapporo_winter_noon_deg": 23.54,
+    "arctic_winter_noon_deg": 0.05,
+    "arctic_summer_noon_deg": 46.85,
+    "tokyo_shadow_x": 1.67,
+    "sapporo_shadow_x": 2.295,
+    "jan_tokyo_c": 5.4,
+    "jan_sapporo_c": -3.2,
+    "jan_drop_c": 8.6,
+    "snowfall_tokyo_cm": 8,
+    "snowfall_sapporo_cm": 479,
+    "snow_ratio": 59.88,
+    "snow_days_tokyo": 8.5,
+    "snow_days_sapporo": 134.5,
+    "jan_sun_tokyo_h": 192.6,
+    "jan_sun_sapporo_h": 90.4,
+    "jan_sun_ratio": 0.469
+  },
+  "sources": [
+    "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662&year=&month=&day=&view=",
+    "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=14&block_no=47412&year=&month=&day=&view=",
+    "https://www.jma.go.jp/jma/kishou/know/amedas/ame_master.pdf",
+    "https://www.jma.go.jp/jma/kishou/know/upper/kaisetsu.html",
+    "https://www.nao.ac.jp/faq/a0109.html",
+    "https://kotobank.jp/word/%E5%8C%97%E6%A5%B5%E5%9C%8F-133447",
+    "https://www.gsi.go.jp/common/000240801.pdf"
+  ],
+  "cover_ms": 22000
+}
