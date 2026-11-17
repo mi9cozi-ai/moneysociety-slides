@@ -1,0 +1,27 @@
+What if Tokyo moved 820 km north? 🧭
+もしも東京が820 km北にあったら？
+
+Tokyo sits at 35.7°N: January averages 5.4°C and only 8 cm of snow falls a year (JMA). Move it 820 km north to Sapporo's latitude (43.1°N):
+① January ≈ −3.2°C instead of 5.4°C (estimate, like Sapporo)
+② Snowfall 8 cm → 479 cm a year, about 60×; snow on ~135 days (estimate)
+③ Winter noon sun 30.9° → 23.5° (90 − latitude − 23.4) → your noon shadow grows from 1.7× to 2.3× your height
+Then the Arctic Circle (66°33′N, ≈3,430 km north):
+④ On the winter solstice the sun does not rise
+⑤ On the summer solstice the sun does not set — the midnight sun
+Lesson: latitude is sunlight. Earth's 23.4° tilt makes the seasons.
+
+東京は北緯35.7°。1月の平均気温5.4°C、雪は年8 cmだけ（気象庁）。札幌と同じ北緯43.1°まで820 km北へ動かすと：
+① 1月の平均が約−3.2°C（推定・札幌なみ）
+② 降雪量 年8 cm→479 cm、約60倍。雪の日は約135日（推定）
+③ 冬至の正午の太陽 30.9°→23.5°（90−緯度−23.4）。正午の影が身長の1.7倍→2.3倍に
+さらに北極圏（北緯66°33′、約3,430 km北）へ：
+④ 冬至の日、太陽が昇らない（極夜）
+⑤ 夏至の日、太陽が沈まない（白夜）
+わかったこと：緯度は日ざしを変える。季節をつくるのは地球の傾き23.4°。
+
+Sources / 出典: 気象庁（平年値1991–2020・観測所位置）, 国立天文台（南中高度）, コトバンク（北極圏）, 国土地理院（地球の大きさ）
+Assumptions / 前提: only latitude changes; Sapporo's climate stands in for the new Tokyo (estimate); 1° latitude ≈ 111 km.
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #tokyo #science #雑学 #北極圏

@@ -1,0 +1,29 @@
+What if Earth weren't tilted? 🌏
+もしも地球の傾きがゼロだったら？
+
+Earth's axis is tilted about 23.5° (NASA). Tokyo: 26.9°C in August, 5.4°C in January (JMA normals).
+Tilt → 0°
+① Every day has 12 h of daylight everywhere (now Tokyo: 14 h 35 min in June, 9 h 45 min in December)
+② Tokyo stays near its yearly average, 15.8°C, all year (estimate)
+③ Cherry buds need winter cold to wake up (JMA) → they may not bloom (estimate)
+Tilt → 90° (on its side, like Uranus)
+④ June in Tokyo: the Sun never sets for about 71 days
+⑤ December: about 71 days of night
+Lesson: the tilt makes the seasons.
+
+地球の自転軸は約23.5°傾いている（NASA）。東京の平年気温は8月26.9°C、1月5.4°C（気象庁）。
+傾き0°
+① どこでも毎日、昼が12時間（今の東京は6月14時間35分、12月9時間45分）
+② 東京は一年中、年平均の15.8°C前後（推定）
+③ 桜の花芽は冬の寒さで目覚める（気象庁）→ 咲かないかも（推定）
+傾き90°（天王星のように横倒し）
+④ 6月の東京：約71日間、太陽が沈まない
+⑤ 12月：約71日間、夜が続く
+わかったこと：季節をつくっているのは地軸の傾き。
+
+Sources / 出典: NASA, 気象庁（平年値・さくら）, 国立天文台 暦計算室
+Assumptions / 前提: circular orbit at even speed; atmosphere refraction ignored; "every month ≈ yearly average" is a simple estimate.
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #science #雑学 #地球 #季節

@@ -1,0 +1,29 @@
+What if Japan's sea rose 1 meter? 🌊
+もしも日本の海面が1 m上がったら？
+
+Today 861 km² of Japan already lies below high tide, home to about 2 million people.
++1 m
+① About 90% of Japan's sandy beaches vanish (+30 cm already erases ~57%)
+② Land below high tide: 861 → 2,339 km² (2.7×)
+③ People living below high tide: 2.0 → 4.1 million; storm-surge risk zones 11.7 → 15.4 million
+−130 m (like 20,000 years ago)
+④ The Seto Inland Sea (average depth 38 m) becomes dry land
+⑤ Soya Strait (30–70 m deep) becomes a land bridge to Sakhalin (estimate)
+Lesson: the coastline is not fixed.
+
+今でも日本の861 km²は満潮時の海面より低く、約200万人が住んでいる。
++1 m
+① 砂浜の約9割が消える（30 cmでも約57%）
+② 満潮より低い土地が861→2,339 km²（2.7倍）
+③ そこに住む人が200万→410万人。高潮の危険地域は1,174万→1,542万人
+−130 m（2万年前のように）
+④ 瀬戸内海（平均水深38 m）が陸地に
+⑤ 宗谷海峡（水深30〜70 m）が陸続きに（推定）
+わかったこと：海岸線は動く。
+
+Sources / 出典: 環境白書（平成7年）, CGER『Data Book on Sea-Level Rise』, 国土交通省（瀬戸内海の地形と地質）, 産総研 地質調査総合センター
+Assumptions / 前提: +1 m effects are from 1990s government studies; the land bridges assume today's sea-floor depths.
+
+※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。
+
+#whatif #もしも #aisimulation #japan #海面上昇 #sealevel #science #雑学
