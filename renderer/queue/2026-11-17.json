@@ -1,0 +1,273 @@
+{
+  "id": "earth-no-tilt",
+  "lang": "en+ja",
+  "seed": 41,
+  "title_html": "What if Earth<br>weren't <em>tilted</em>?",
+  "title_html_ja": "もしも地球の傾きがゼロだったら？",
+  "title_plain": "What if Earth weren't tilted?",
+  "setting": "A year on a Tokyo back street.",
+  "setting_ja": "東京の路地で、1年を見てみる。",
+  "duration": 80,
+  "time_of_day": "day",
+  "crowd": 8,
+  "scene": "street",
+  "heroes": 2,
+  "music": {
+    "mood": "epic"
+  },
+  "title_window": [
+    0,
+    5
+  ],
+  "countdowns": [
+    {
+      "label": "Tilt → 0° in",
+      "show_from": 8,
+      "zero_at": 12
+    },
+    {
+      "label": "Tilt → 90° in",
+      "show_from": 41,
+      "zero_at": 44
+    }
+  ],
+  "actions": [
+    {
+      "t": 12,
+      "type": "shake",
+      "dur": 4,
+      "amp": 0.5
+    },
+    {
+      "t": 44,
+      "type": "shake",
+      "dur": 3.5,
+      "amp": 0.8
+    }
+  ],
+  "sky": [
+    {
+      "t": 20,
+      "to": "#a9c8e6",
+      "dur": 3
+    },
+    {
+      "t": 51,
+      "to": "#ffd27a",
+      "dur": 3
+    },
+    {
+      "t": 58,
+      "to": "#0b1430",
+      "dur": 3
+    }
+  ],
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 20,
+      "scene": "street",
+      "camera": "follow"
+    },
+    {
+      "t0": 20,
+      "t1": 40,
+      "scene": "street",
+      "camera": "high"
+    },
+    {
+      "t0": 40,
+      "t1": 58,
+      "scene": "street",
+      "camera": "front"
+    },
+    {
+      "t0": 58,
+      "t1": 80,
+      "scene": "street",
+      "camera": "low"
+    }
+  ],
+  "captions": [
+    {
+      "t0": 5,
+      "t1": 8,
+      "html": "Earth is tilted about <b>23.5°</b>.<br>Tokyo: <b>26.9°C</b> in Aug, <b>5.4°C</b> in Jan.",
+      "html_ja": "地球は約<b>23.5°</b>傾いている。<br>東京は8月26.9°C、1月5.4°C。"
+    },
+    {
+      "t0": 8,
+      "t1": 12,
+      "html": "Let's stand Earth<br><b>straight up</b> and see what changes.",
+      "html_ja": "地球を<b>まっすぐ</b>立てて、<br>何が変わるか見てみよう。"
+    },
+    {
+      "t0": 12,
+      "t1": 16,
+      "html": "<b>It's turning!</b>",
+      "html_ja": "<b>地球が起き上がる！</b>"
+    },
+    {
+      "t0": 40,
+      "t1": 44,
+      "html": "Then what if Earth tipped<br>onto its <b>side</b>, like Uranus?",
+      "sfx": "twist",
+      "html_ja": "では、天王星のように<br><b>横倒し</b>なら？"
+    },
+    {
+      "t0": 44,
+      "t1": 47.5,
+      "html": "<b>Tipping over…</b>",
+      "html_ja": "<b>倒れていく…</b>"
+    }
+  ],
+  "counters": [
+    {
+      "t0": 16,
+      "t1": 20,
+      "from": 23.5,
+      "to": 0,
+      "decimals": 1,
+      "suffix": "°",
+      "label": "Earth's tilt",
+      "label_ja": "地軸の傾き",
+      "run": 2.5
+    },
+    {
+      "t0": 47.5,
+      "t1": 51,
+      "from": 0,
+      "to": 90,
+      "decimals": 0,
+      "suffix": "°",
+      "label": "Earth's tilt",
+      "label_ja": "地軸の傾き",
+      "run": 2.5
+    }
+  ],
+  "effects": [
+    {
+      "t0": 20,
+      "t1": 27,
+      "n": 1,
+      "total": 5,
+      "tag": "LIGHT",
+      "head": "Every day:<br><b>12 hours</b> of daylight",
+      "sub": "No tilt → the Sun stays over the equator.<br>Today Tokyo gets <b>14 h 35 min</b> in June,<br><b>9 h 45 min</b> in December.",
+      "head_ja": "毎日、昼が<b>12時間</b>に",
+      "sub_ja": "太陽はいつも赤道の真上。今の東京は6月14時間35分、12月9時間45分。"
+    },
+    {
+      "t0": 27,
+      "t1": 34,
+      "n": 2,
+      "total": 5,
+      "tag": "CLIMATE",
+      "head": "Tokyo stuck near<br><b>16°C all year</b> (estimate)",
+      "sub": "No seasons: every month near the yearly<br>average, <b>15.8°C</b>. No 26.9°C August,<br>no 5.4°C January.",
+      "head_ja": "東京は一年中<b>約16°C</b>（推定）",
+      "sub_ja": "季節がなくなり、毎月が年平均15.8°C前後に。真夏も真冬もない。"
+    },
+    {
+      "t0": 34,
+      "t1": 40,
+      "n": 3,
+      "total": 5,
+      "tag": "NATURE",
+      "head": "Cherry blossoms<br><b>may not bloom</b> (estimate)",
+      "sub": "Sakura buds wake up only after<br>a spell of <b>winter cold</b> (JMA).<br>No winter, no wake-up call.",
+      "head_ja": "桜が<b>咲かないかも</b>（推定）",
+      "sub_ja": "花芽は冬の寒さで目覚める（気象庁）。冬がなければ目覚めない。"
+    },
+    {
+      "t0": 51,
+      "t1": 58,
+      "n": 4,
+      "total": 5,
+      "tag": "LIGHT",
+      "head": "June in Tokyo: <b>the Sun<br>never sets</b> for ~71 days",
+      "sub": "Tilt 90° → the Sun can sit up to 90° north.<br>Above <b>54.3°</b> north (90° − Tokyo's 35.7°)<br>it circles the sky all day.",
+      "head_ja": "6月の東京：<b>約71日間</b>太陽が沈まない",
+      "sub_ja": "太陽が北へ54.3°（90°−東京の緯度35.7°）を超えると、一日中沈まない。"
+    },
+    {
+      "t0": 58,
+      "t1": 66,
+      "n": 5,
+      "total": 5,
+      "tag": "NIGHT",
+      "head": "December: <b>~71 days<br>of night</b>",
+      "sub": "Same rule, the other way. Uranus does this<br>for real: tilt <b>97.77°</b>, each pole gets<br>a <b>21-year</b> dark winter (NASA).",
+      "head_ja": "12月：<b>約71日間</b>夜が続く",
+      "sub_ja": "同じ理屈で逆に。天王星（傾き97.77°）では各極に21年の暗い冬が来る（NASA）。",
+      "pos": "bottom"
+    }
+  ],
+  "gauges": [
+    {
+      "t0": 27,
+      "t1": 34,
+      "label": "Tokyo<br>August",
+      "label_ja": "東京の8月",
+      "from": 26.9,
+      "to": 15.8,
+      "delay": 0.6,
+      "run": 3,
+      "min": 0,
+      "max": 35,
+      "decimals": 1
+    }
+  ],
+  "bubbles": [
+    {
+      "t0": 12.5,
+      "t1": 16,
+      "text": "Whoa!",
+      "person": 1
+    },
+    {
+      "t0": 13,
+      "t1": 16,
+      "text": "Is the sky moving?",
+      "person": 4
+    },
+    {
+      "t0": 52,
+      "t1": 55,
+      "text": "It's still bright?!",
+      "person": 2
+    }
+  ],
+  "end": {
+    "t0": 66,
+    "html": "<h1>What we learned:<br><b>The tilt makes the seasons.</b><br>0° → no summer, no winter.</h1><p class='jaend'>わかったこと：<b>季節をつくっているのは地軸の傾き。</b><br>傾きがなければ夏も冬もなく、<br>傾きすぎると何十日も昼や夜が続く。</p><h2>Assumptions</h2><p>· Circular orbit at even speed; refraction ignored<br>· \"Every month ≈ yearly average\" is a simple estimate</p><h2>Sources</h2><p>· Earth's tilt, Uranus: NASA<br>· Tokyo normals 1991–2020, sakura: JMA<br>· Sunrise/sunset 2026: NAOJ</p><div class='note'>This is an AI simulation. It is not a real event.<br>AIシミュレーションです。実際の出来事ではありません。</div>"
+  },
+  "caption": "What if Earth weren't tilted? 🌏\nもしも地球の傾きがゼロだったら？\n\nEarth's axis is tilted about 23.5° (NASA). Tokyo: 26.9°C in August, 5.4°C in January (JMA normals).\nTilt → 0°\n① Every day has 12 h of daylight everywhere (now Tokyo: 14 h 35 min in June, 9 h 45 min in December)\n② Tokyo stays near its yearly average, 15.8°C, all year (estimate)\n③ Cherry buds need winter cold to wake up (JMA) → they may not bloom (estimate)\nTilt → 90° (on its side, like Uranus)\n④ June in Tokyo: the Sun never sets for about 71 days\n⑤ December: about 71 days of night\nLesson: the tilt makes the seasons.\n\n地球の自転軸は約23.5°傾いている（NASA）。東京の平年気温は8月26.9°C、1月5.4°C（気象庁）。\n傾き0°\n① どこでも毎日、昼が12時間（今の東京は6月14時間35分、12月9時間45分）\n② 東京は一年中、年平均の15.8°C前後（推定）\n③ 桜の花芽は冬の寒さで目覚める（気象庁）→ 咲かないかも（推定）\n傾き90°（天王星のように横倒し）\n④ 6月の東京：約71日間、太陽が沈まない\n⑤ 12月：約71日間、夜が続く\nわかったこと：季節をつくっているのは地軸の傾き。\n\nSources / 出典: NASA, 気象庁（平年値・さくら）, 国立天文台 暦計算室\nAssumptions / 前提: circular orbit at even speed; atmosphere refraction ignored; \"every month ≈ yearly average\" is a simple estimate.\n\n※ This is an AI simulation. It is not a real event. / AIシミュレーションです。実際の出来事ではありません。\n\n#whatif #もしも #aisimulation #japan #science #雑学 #地球 #季節",
+  "facts_check": {
+    "tilt_deg": 23.5,
+    "tokyo_lat": 35.6581,
+    "day_len_tilt0_h": 12.0,
+    "tokyo_jun21_naoj_min": 875,
+    "tokyo_dec21_naoj_min": 585,
+    "tokyo_aug_c": 26.9,
+    "tokyo_jan_c": 5.4,
+    "tokyo_year_c": 15.8,
+    "aug_drop_c": 11.1,
+    "tilt90_polar_threshold_deg": 54.3419,
+    "tilt90_polar_day_days": 71.36,
+    "tilt90_polar_night_days": 71.36,
+    "uranus_tilt_deg": 97.77,
+    "uranus_dark_winter_years": 21,
+    "rule_daylength": "cos H = -tan(lat)·tan(dec); day = 2H/15 h",
+    "rule_tilt90": "sin(dec) = sin(tilt)·sin(orbit angle); polar day when dec > 90 - lat"
+  },
+  "sources": [
+    "https://science.nasa.gov/earth/earth-observatory/milutin-milankovitch/",
+    "https://science.nasa.gov/uranus/facts/",
+    "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662&year=&month=&day=&view=",
+    "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s1306.html",
+    "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s1312.html",
+    "https://www.jma.go.jp/jma/press/0603/08a/sakura2006_2.html"
+  ],
+  "cover_ms": 22000
+}
